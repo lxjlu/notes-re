@@ -1,3 +1,5 @@
+# Anyone from anywhere can learn anything
+
 ## nlab
 
 - [Hölder's inequality](https://ncatlab.org/nlab/show/H%C3%B6lder%27s+inequality)
@@ -14,6 +16,21 @@
 - [Dr. Matthias Voigt](https://www.math.uni-hamburg.de/home/voigt/index.html.en)
 - [Dr. Jiongmin Yong](https://sciences.ucf.edu/math/jyong/)
 - [North Dakota State University lec](http://www.bisonacademy.com/index.html)
+- [Neil Lawrence](https://inverseprobability.com/)
+- [IAN OSBAND](https://iosband.github.io/)
+- [Mandy (Mengdi) Wang](https://mwang.princeton.edu/)
+- [Pascal Poupart](https://cs.uwaterloo.ca/~ppoupart/)
+- [Philip S. Thomas](https://people.cs.umass.edu/~pthomas/index.html#pubs2019)
+- [Sham M. Kakade](https://homes.cs.washington.edu/~sham/)
+- [Roy Fox](https://royf.org/)
+- [Dimitri P. Bertsekas](http://www.mit.edu/~dimitrib/home.html)
+- [Massimiliano Patacchiola](https://mpatacchiola.github.io/blog/)
+- [李宏毅](http://speech.ee.ntu.edu.tw/~tlkagk/index.html)
+- [David Silver](https://www.davidsilver.uk/)
+- [xiao yuchen](https://ycx424.wixsite.com/xiaoyc)
+- [Anca Dragan](https://people.eecs.berkeley.edu/~anca/index.html)
+- [Pieter Abbeel](https://people.eecs.berkeley.edu/~pabbeel/)
+- [Emma Brunskill](https://cs.stanford.edu/people/ebrun/)
 - 
 
 ## YouTube
@@ -55,6 +72,10 @@
 - [LP/SDP Hierarchies and Sum of Squares Proofs 1](https://www.youtube.com/watch?v=HdZajqWl15I&ab_channel=SimonsInstitute)
 - [半正定规划 ](https://www.zhihu.com/search?type=content&q=%E5%8D%8A%E6%AD%A3%E5%AE%9A%E8%A7%84%E5%88%92%20)
 - [西南大学优化讲座---随机鲁棒优化理论与算法](https://www.bilibili.com/video/BV1Xt4y1Y78z?p=4)
+- [Introduction to Optimization and Optimal Control using the software packages CasADi and ACADO](https://www.youtube.com/watch?v=JC6PNjndQ_c&ab_channel=VirtualSimulationLab)
+- [10-725 Optimization Fall 2012](http://www.cs.cmu.edu/~ggordon/10725-F12/schedule.html)
+- [Holistic Numerical Methods](http://nm.mathforcollege.com/topics/shooting_method.html)
+- [Numerical Optimal Control Dr. Moritz Diehl](https://www.syscop.de/teaching/ss2017/numerical-optimal-control)
 - 
 
 ## Julia Language
@@ -81,6 +102,9 @@
 - [A fast and incredible Emacs config](https://github.com/condy0919/.emacs.d)
 - [A list of people with nice emacsconfig files](https://github.com/caisah/emacs.dz)
 - [using-emacs](https://github.com/zamansky/using-emacs)
+- [Emacs: The Best Python Editor](https://realpython.com/emacs-the-best-python-editor/)
+- [Org 日程安排](https://www.gtrun.org/post/my-agenda/)
+- [latex emacs](https://www.dieterbrehm.com/blog/emacs-latex.html)
 - 
 
 
@@ -116,6 +140,13 @@
 - [Explicit solutions of some Linear-Quadratic Mean Field Games](https://hal.inria.fr/hal-00664442/document)
 - [Principles of Autonomy and Decision Making Lecture 25: Differential Games](https://ocw.mit.edu/courses/aeronautics-and-astronautics/16-410-principles-of-autonomy-and-decision-making-fall-2010/lecture-notes/MIT16_410F10_lec25.pdf)
 - [Introduction to differential games](https://www.ceremade.dauphine.fr/~cardaliaguet/CoursJeuxDiff.pdf)
+- [Multi-agent learning](http://www.cs.uu.nl/docs/vakken/maa/current/index.html)
+- [EE290O | Deep multi-agent reinforcement learning with applications to autonomous traffic](https://flow-project.github.io/EE290O/index.html)
+- [CS286r: Topics at the Interface between Computer Science and Economics](http://www.eecs.harvard.edu/cs286r/courses/fall12/index.html#CourseStructure)
+- [CS 286r Syllabus, Spring 2006](http://www.eecs.harvard.edu/~parkes/cs286r/spring06/schedule.html)
+- [Multi-agent Reinforcement Learning ](https://paperswithcode.com/task/multi-agent-reinforcement-learning)
+- [MARL-Papers](https://github.com/LantaoYu/MARL-Papers)
+- [Understanding “Stabilising Experience Replay for Deep Multi-Agent Reinforcement Learning](https://medium.com/@parnianbrk/understanding-stabilising-experience-replay-for-deep-multi-agent-reinforcement-learning-84b4c04886b5)
 - 
 
 
@@ -127,18 +158,101 @@
 - [CS480/680 Lecture 12: Gaussian Processes](https://www.youtube.com/watch?v=exqpaqaPG2M&ab_channel=PascalPoupart)
 - [CS480/680 Lecture 7: Mixture of Gaussians](https://www.youtube.com/watch?v=Weq0KiSTHAs&list=PLdAoL1zKcqTW-uzoSVBNEecKHsnug_M0k&index=14&ab_channel=PascalPoupart)
 - [Introduction to Gaussian processes](https://www.youtube.com/watch?v=GWHE5vnpxks&t=283s&ab_channel=GaussianProcessSummerSchool)
+- [Deep Probabilistic Modelling with with Gaussian Processes](http://inverseprobability.com/talks/notes/deep-probabilistic-modelling-with-gaussian-processes.html)
+- [CPSC 540](https://www.cs.ubc.ca/~nando/540-2013/lectures.html)
+- [[APPROXIMATE DYNAMIC PROGRAMMING](http://adpthu2014.weebly.com/)](http://adpthu2014.weebly.com/)
+- [machine-learning-notes](https://github.com/roboticcam/machine-learning-notes)
+- [ADSI SUMMER WORKSHOP: ALGORITHMIC FOUNDATIONS OF LEARNING AND CONTROL](https://ajwagen.github.io/adsi_learning_and_control/)
+- [Hierarchical RL Workshop NIPS 2017](https://sites.google.com/view/hrlnips2017)
+- [L4DC](https://l4dc.mit.edu/)
+- [Pierre-Luc Bacon/Doina Precup: Doina Precup - Advances in Option Construction](https://www.youtube.com/watch?v=8r_EoYnPjGk&feature=youtu.be&ab_channel=DanielMankowitz)
+- [Policy Gradient Algorithms Lil'Log](https://lilianweng.github.io/lil-log/2018/04/08/policy-gradient-algorithms.html#proof-of-policy-gradient-theorem)
+- [Dissecting Reinforcement Learning-Part.1](https://mpatacchiola.github.io/blog/2016/12/09/dissecting-reinforcement-learning.html)
+- [DeepRL](https://github.com/NeuronDance/DeepRL)
+- [Bayesian Methods Research Group](https://bayesgroup.github.io/)
+- [CS 285 at UC Berkeley](http://rail.eecs.berkeley.edu/deeprlcourse/)
+- [MACHINE LEARNING](https://davidrosenberg.github.io/ml2019/#home)
+- [Statistical Learning](https://www.youtube.com/watch?v=3wbLr-NnIKI&list=PLTPQEx-31JXhguCush5J7OGnEORofoCW9&ab_channel=PaulG.AllenSchool)
+- [MIT Institute for Data, Systems, and Society](https://www.youtube.com/channel/UCSlhlkPaq3RL1CP0Tv1xWBQ/videos)
+
+
+
+### Lectures
+
+- [Reinforcement Learning for Stochastic Control Problems in Finance](http://web.stanford.edu/class/cme241/)
+- [动手学习深度学习](https://zh.d2l.ai/)
+- [Reinforcement Learning and Decision Making MLSALT7 Lent 2016](http://mlg.eng.cam.ac.uk/teaching/mlsalt7/1516/)
+- [Stochastic Modeling using Python](http://people.bu.edu/andasari/courses/stochasticmodeling/stochastics.html)
+- [CSE 599G1 Deep RL](http://deeprl.cs.washington.edu/schedule)
+- [RL NPTEL](https://nptel.ac.in/courses/106/106/106106143/#)
+- [CS885 Reinforcement Learning - Spring 2018 - University of Waterloo](https://www.youtube.com/watch?v=xoxz-OmcL1Q&list=PLdAoL1zKcqTXFJniO3Tqqn6xMBBL07EDc)
+- [Deep RL Bootcamp](https://sites.google.com/view/deep-rl-bootcamp/home)
+- [REINFORCEMENT LEARNING AND OPTIMAL CONTROL](http://www.mit.edu/~dimitrib/RLbook.html)
+- [A Free course in Deep Reinforcement Learning from beginner to expert.](https://simoninithomas.github.io/deep-rl-course/)
+- [OpenAI Spinning Up](https://spinningup.openai.com/en/latest/index.html)
+- [DRL with Pytorch](https://github.com/sweetice/Deep-reinforcement-learning-with-pytorch)
+- 
+
+
+
+### Labs
+
+- [天津大学深度强化学习实验室](http://www.icdai.org/)
+
+
+
+### others
+
+- [Understanding LSTM Networks](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
 - 
 
 ## Math
 
+- [MIT牛人解说数学体系](http://sparkandshine.net/mit-mathematical-formalism/)
+- [IAS Videos](https://www.ias.edu/video)
+- 
+
+
+
+### Analysis
+
+- [分析 齊震宇](http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/105S107)
+- 
+
 ### Functional Analysis
 
 - [Functional Analysis (MTH-FA) Lecture 1](https://www.youtube.com/watch?v=IyH9LgOw5s4&list=PLp0hSY2uBeP8fav3g6SNIYnt-00klqmx9&ab_channel=ICTPPostgraduateDiplomaProgramme)
+- [MAST30026: Metric and Hilbert spaces](https://handbook.unimelb.edu.au/subjects/mast30026)
 - 
 
 ### Matrix
 
 - [矩阵求导公式的数学推导](https://zhuanlan.zhihu.com/p/273729929)
+- [Matrix Calculus](http://www.matrixcalculus.org/)
+- 
+
+### Differential Equations
+
+- [国立交通大学微分方程](https://ocw.nctu.edu.tw/course_detail.php?bgid=1&gid=1&nid=500)
+- [Elliot Nicholson](https://www.youtube.com/channel/UCu5cg_Jd9XSJL_CHUskgkGw/playlists)
+
+
+
+### Topology 
+
+- [ThoughtSpaceZero](https://www.youtube.com/channel/UCqoE_pn0KNzlBpd612dltGg)
+- [Topology and Groups](http://www.homepages.ucl.ac.uk/~ucahjde/tg/html/index.html)
+- 
+
+### Statistics
+
+- [cmu 36-705 Intermediate Statistics](http://www.stat.cmu.edu/~larry/=stat705/)
+- [Probability, Mathematical Statistics, Stochastic Processes](https://www.randomservices.org/random/index.html)
+- [Fundamentals of Mathematical Statistics](https://stat.ethz.ch/lectures/as19/mathstat.php#course_materials)
+- [Markov Chains](https://setosa.io/blog/2014/07/26/markov-chains/index.html)
+- 
+
+
 
 
 
@@ -150,12 +264,19 @@
 - [CS229 学习笔记第十六章：LQR, DDP 和 LQG](https://zhuanlan.zhihu.com/p/149130180)
 - [LQR控制器— 线性二次型调节器 ](https://zhuanlan.zhihu.com/p/139145957)
 - [Optimal Control: Pontryagin Minimum Principle](http://ifatwww.et.uni-magdeburg.de/syst/education/courses/oc/downloads_ws1819/oc_ws1819_lecture06_handout.pdf)
+- [Model Predictive Control: Theory, Computation, and Design](https://sites.engineering.ucsb.edu/~jbraw/mpc/)
+- [Trajectory Optimization](http://www.matthewpeterkelly.com/tutorials/trajectoryOptimization/)
+- [MPC and MHE implementation in Matlab using Casadi](https://www.youtube.com/watch?v=RrnkPrcpyEA&list=PLK8squHT_Uzej3UCUHjtOtm5X7pMFSgAL)
 - 
 
 ## Tools
 
 - [Microsoft Academic](https://academic.microsoft.com/paper/3105252106/citedby/search?q=Cautious%20Model%20Predictive%20Control%20Using%20Gaussian%20Process%20Regression&qe=RId%3D3105252106&f=Pt%3D%271%27&orderBy=0)
 - [Stochastic data-driven model predictive control using gaussian processes](https://academic.microsoft.com/paper/3025528584/reference/search?q=Stochastic%20data-driven%20model%20predictive%20control%20using%20gaussian%20processes&qe=Or(Id%253D1746819321%252CId%253D2123871098%252CId%253D1561941139%252CId%253D164706946%252CId%253D2166751342%252CId%253D2101589741%252CId%253D2140135625%252CId%253D2842089854%252CId%253D2557055507%252CId%253D2300303305%252CId%253D1608758704%252CId%253D2170912685%252CId%253D2067716288%252CId%253D2104533781%252CId%253D2060016034%252CId%253D2085330455%252CId%253D2050497240%252CId%253D2169967276%252CId%253D2144519176%252CId%253D2033552200%252CId%253D2788545772%252CId%253D2214230591%252CId%253D2143346970%252CId%253D3105252106%252CId%253D2892521964%252CId%253D2126877537%252CId%253D2007921211%252CId%253D1997979764%252CId%253D2035476608%252CId%253D2155162055%252CId%253D2005233125%252CId%253D2769410804%252CId%253D1980008009%252CId%253D2162977544%252CId%253D2963602521%252CId%253D2803275621%252CId%253D2313845455%252CId%253D2765395770%252CId%253D2034013221%252CId%253D2900806034%252CId%253D2791704483%252CId%253D2790462153%252CId%253D2962821278%252CId%253D2761385663%252CId%253D2963436565%252CId%253D193284199%252CId%253D428122196%252CId%253D2901507551%252CId%253D2887433804%252CId%253D2158285907%252CId%253D2418467170%252CId%253D1486900740%252CId%253D2006173868%252CId%253D3011595849%252CId%253D2012965104%252CId%253D138954948%252CId%253D2895897260%252CId%253D2508333314%252CId%253D2226572474%252CId%253D2903070737%252CId%253D2902179606%252CId%253D2626767683%252CId%253D1545374208%252CId%253D1555556024%252CId%253D2901618432%252CId%253D2941935441%252CId%253D1504372315%252CId%253D2890351024%252CId%253D2137591261)&f=&orderBy=0)
+- [paper with code](https://paperswithcode.com/)
+- [OpenReview](https://openreview.net/forum?id=SJgUYBVLsN)
+- [SlidesLive](https://slideslive.com/38917653/alphastar-mastering-the-game-of-starcraft-ii)
+- [CMake 入门](https://www.hahack.com/codes/cmake/)
 - 
 
 
