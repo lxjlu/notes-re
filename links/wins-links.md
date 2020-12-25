@@ -79,7 +79,7 @@
 ### Config
 
 - [A fast and incredible Emacs config](https://github.com/condy0919/.emacs.d)
-- [A list of people with nice [emacs](https://www.gnu.org/software/emacs/) config files](https://github.com/caisah/emacs.dz)
+- [A list of people with nice emacsconfig files](https://github.com/caisah/emacs.dz)
 - [using-emacs](https://github.com/zamansky/using-emacs)
 - 
 
