@@ -23,6 +23,7 @@
 - [Russian – Chinese Educational Seminar: 4. Game Theory](https://www.youtube.com/watch?v=22_HZZSEH0g&ab_channel=%D0%9E%D0%B2%D0%B0%D0%BD%D0%B5%D1%81%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D1%81%D1%8F%D0%BD)
 - [Data Driven Control using MATLAB Part 1 Stabilization and Optimal Control](https://www.youtube.com/watch?v=82wOgZJLX3M&ab_channel=AliNasir)
 - [Safe and Efficient Inverse Reinforcement Learning, PhD defense by Daniel S. Brown](https://www.youtube.com/watch?v=Ob_tcEzVyjU&ab_channel=DanielBrown)
+- [Russian – Chinese Educational Seminar: 5. Optimal Control](https://www.youtube.com/watch?v=noSAvyKCqhk&ab_channel=%D0%9E%D0%B2%D0%B0%D0%BD%D0%B5%D1%81%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D1%81%D1%8F%D0%BD)
 - 
 
 ## Markdown 
@@ -35,6 +36,7 @@
 
 - [Control Theory: MATH4406 / MATH7406](https://people.smp.uq.edu.au/YoniNazarathy/Control4406/ControlMATH4406.html)
 - [MAE598 (LMIs in Control): Lecture 1, part A - The Big Picture](https://www.youtube.com/watch?v=iuBFvsepKTo&list=PL5ebyVGQORm6n158o-I_liUZ7Q5Od43li&ab_channel=MatthewPeet)
+- [Advanced Control Systems Lecture Series Week 15 Optimization, Optimal Control Law, Riccati Equations](https://www.youtube.com/watch?v=FSqE3FXY5kM&ab_channel=TrainingsHubByDr.ArslanAmin)
 - 
 
 ### Optimization
@@ -67,6 +69,9 @@
 ### youtube
 
 - [Combining Deep Reinforcement Learning and Search for Imperfect-Information Games](https://www.youtube.com/watch?v=mCldyXOYNok&ab_channel=NoamBrown)
+- [Mean-Field-Type Games: LQ](https://www.youtube.com/watch?v=mKXEu4SzwpI&ab_channel=LnGLab)
+- [Linear Quadratic Games (GRASP Game Theory Seminar 7/30)](https://www.youtube.com/watch?v=YlAOKjHy15s&t=2950s&ab_channel=FJYang)
+- 
 
 
 
@@ -79,7 +84,12 @@
 - [Introduction to Gaussian processes](https://www.youtube.com/watch?v=GWHE5vnpxks&t=283s&ab_channel=GaussianProcessSummerSchool)
 - 
 
+## Math
 
+### Functional Analysis
+
+- [Functional Analysis (MTH-FA) Lecture 1](https://www.youtube.com/watch?v=IyH9LgOw5s4&list=PLp0hSY2uBeP8fav3g6SNIYnt-00klqmx9&ab_channel=ICTPPostgraduateDiplomaProgramme)
+- 
 
 
 
