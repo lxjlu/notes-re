@@ -7,27 +7,15 @@
 \usepackage{fontspec}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{subfigure}
+\usepackage{amsthm,amsfonts}
+
+
 
 % \setmainfont{LMRomanUnsl10-Regular}
 % \setmainfont{Noto Sans Mono CJK JP}
 \setmainfont{黑体}
-
-\setbeamercolor{huibai}{bg=gray, fg=white}
-
-\setbeamertemplate{itemize/enumerate body begin}{\small}
-\setbeamertemplate{itemize/enumerate subbody begin}{\small}
-\setbeamertemplate{itemize/enumerate subsubbody begin}{\normalsize}
-
-% \setbeamertemplate{headline}{
-%   \hbox{
-%     \begin{beamercolorbox}[wd= .5 \paperwidth, ht=.2cm, dp=1ex]{huibai}
-%       \insertsection \insertsubsection
-%     \end{beamercolorbox}
-%     \begin{beamercolorbox}[wd= .5 \paperwidth, ht=.2cm, dp=1ex]{huibai}
-%       \insertshortauthor[center]
-%     \end{beamercolorbox}
-%   }
-% }
 
 % \useoutertheme{miniframes}
 \usetheme{Goettingen}
@@ -44,50 +32,73 @@
 
 \section{背景}
 \begin{frame}
-  \frametitle{自动驾驶中的决策问题}
-  \begin{itemize}
-  \item 从A到B问题.
-  \item 从A到B，中间加入静态障碍物的问题.
-  \item 从A到B，中间加入动态障碍物的问题.
-  \item 从A到B，中间加入有智力的动态智能体的问题.
-  \end{itemize}
+ \frametitle{自动驾驶中的决策/规划问题}
+\begin{figure}[htbp]
+\centering
+
+\subfigure[从A到B问题.]{
+\begin{minipage}[t]{0.5\linewidth}
+\centering
+\includegraphics[height=1in,width=2in]{1.jpg}
+%\caption{fig1}
+\end{minipage}%
+}%
+\subfigure[从A到B,有静态障碍物的问题.]{
+\begin{minipage}[t]{0.5\linewidth}
+\centering
+\includegraphics[height=1in,width=2in]{2.jpg}
+%\caption{fig2}
+\end{minipage}%
+}%
+        
+%这个回车键很重要 \quad也可以
+\subfigure[从A到B,有动态障碍物的问题.]{
+\begin{minipage}[t]{0.5\linewidth}
+\centering
+\includegraphics[height=1in,width=2in]{3.jpg}
+%\caption{fig2}
+\end{minipage}
+}%
+\subfigure[从A到B,有动态智能体的问题.]{
+\begin{minipage}[t]{0.5\linewidth}
+\centering
+\includegraphics[height=1in,width=2in]{4.jpg}
+%\caption{fig2}
+\end{minipage}
+}%
+
+%\centering
+%\caption{ pics}
+\end{figure}
 \end{frame}
+
 
 \begin{frame}
   \frametitle{变分法回顾}
   \begin{itemize}
-  \item To find x corresponding to local minimum ($x_{\min}$)
+  \item 寻找$f(x)$的局部极小点的必要条件($x_{\min}$)
     \begin{align}
       \frac{dy}{dx} = 0
     \end{align}.
-  \item Solving $f'(x)=0$ gives stationary points - further testing needed to
-    determine their nature.
-  \item Stationary points of $f(x)$, solve $df / dx=0$ for $x$ (Regular
-    Calulus).
-  \item Stationary functions of a functional $I[f]$ (function of functions).
-  \item Solve (usually differential) equation for stationary function $f(x)$
-    (Calculus of Variations).
-  \item In general, calculus of variations needed to find $y=f(x)$ such that
-    this intergral:
+  \item 只能得到驻点/临界点(stationary/critial points),需要进一步验证.
+  \item 对于泛函($I[f]$),可以通过类似方法得到Stationary functions of a functional.
+  \item 一般而言, 通过需找一个函数 $y=f(x)$ 使得下面的积分:
     \begin{align}
       I[f] = \int_{x_1}^{x_2} F( x, y, \frac{dy}{dx} ) dx
     \end{align}
-    is stationary.
+    stationary.
   \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{Euler-Lagrange 方程推导}
   \begin{itemize}
-  \item Suppose $y(x)$ makes $I$ stationary and satisfies the boundary
-    conditions $y(x_1) = y_1, \quad y(x_2) = y_2$.
-  \item Introduce a function $\eta, \quad \eta (x_1) = \eta (x_2) = 0$.
-  \item Define $\bar{y} = \textcolor{red} {y(x)} + \epsilon \eta(x)$ satisfies same boundary
-    conditions as $y(x)$.
-  \item $\bar{y}$ represents a family of curves. $ y(x) $ represents the extremal.
-  \item Find the particular $\bar{y} (x)$ which makes $I( \epsilon ) =
-    \int_{x_1}^{x_2} F( x, \bar{y}, \bar{y}' )$ stationary.
-  \item Since $I$ depends only on $\epsilon$, to make $I$ stationary, set
+  \item 假设 $y(x)$ 使得泛函 $I[f]$ stationary 且满足边值条件 $y(x_1) = y_1, \, y(x_2) = y_2$.
+  \item 引入辅助函数 $\eta, 满足 \eta (x_1) = \eta (x_2) = 0$.
+  \item 构造一个函数 $\bar{y} = \textcolor{red} {y(x)} + \epsilon \eta(x)$ 可以容易得到这个函数和$y(x)$一样满足边值条件,这样构造出来的函数可以表示满足边值条件的函数族.
+  \item 在这一族函数里面找特定的函数 $\bar{y} (x)$ 满足泛函stationary的条件，因为构造出来的函数可以通过改变$\epsilon$来改变,所以泛函可以表示为 $I( \epsilon ) =
+    \int_{x_1}^{x_2} F( x, \bar{y}, \bar{y}' )$ .
+  \item 这样构造出来的泛函只和$\epsilon$有关,变成了一维问题, 所以一阶条件变成了
     $\frac{dI}{d \epsilon} |_{\epsilon = 0} = 0$,
 
     \begin{align}
@@ -117,27 +128,90 @@
           \textcolor {red} {y} }  - \frac{d}{dx} \big ( \frac{
           \partial F }{ \partial \textcolor {red} {y} } \big )  \big ] \eta(x)  dx =
         0
-        \Rightarrow \frac{ \partial F }{ \partial
+        \Rightarrow \textcolor[rgb]{1.00,0.00,0.00}{ \frac{ \partial F }{ \partial
           {y} }  - \frac{d}{dx} \big ( \frac{
-          \partial F }{ \partial  {y} } \big )  = 0
+          \partial F }{ \partial  {y} } \big )  = 0 }
       \end{split}
     \end{align}.
 
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Euler-Lagrange处理多元函数和约束}
-
-\end{frame}
-
-\begin{frame}
-  \frametitle{经典变分法的缺点}
-
-\end{frame}
 
 \begin{frame}
   \frametitle{庞特里亚金极大值原理}
+  \begin{itemize}
+    \item 一般优化控制问题
+    \begin{align}
+      \begin{split}
+\max  \, & \int_{0}^{T} L(t, x(t), u(t)) \mathrm{d} t+\Psi(T, x(T)) \\
+ \text { s.t. } & \dot{x}(t)=f(t, x(t), u(t)), \quad \text { a.e. } t \in[0, T] \\
+& x(0)=x_{0} \\
+& (T, x(T)) \in \mathcal{T} \subseteq \mathbb{R}^{n+1} \\
+& u(t) \in U \subseteq \mathbb{R}^{m}, \quad \text { a.e. } t \in[0, T]
+\end{split}
+    \end{align}
+    \item Bolza form
+    $$ \int_{0}^{T} L(t, x(t), u(t)) \mathrm{d} t+\Psi(T, x(T)) $$
+    \item Lagrange form
+    $$ \int_{0}^{T} L(t, x(t), u(t)) \mathrm{d} t
+    $$
+    \item Mayer form
+    $$ \Psi(T, x(T))
+    $$ 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{没有终端约束的PMP推导 }
+拉格朗日形式
+$$
+  \mathcal{L}(x, u, p):=\Psi(x(T))+\int_{0}^{T} p(t)(f(t, x(t), u(t))-\dot{x}(t)) \mathrm{d} t,
+$$
+对$x$求偏导
+$$
+D_{x} \mathcal{L}(x, u, p) z=\nabla \Psi(x(T)) z(T)+\int_{0}^{T} p(t)\left(D_{x} f(t, x(t), u(t)) z(t)-\dot{z}(t)\right) \mathrm{d} t
+$$
+分部积分得到
+\begin{align*}
+  \begin{split}
+  D_{x} \mathcal{L}(x, u, p) z=&(\underbrace{\nabla \Psi(x(T))-p(T)}_{\text {终端条件 } p}) z(T)+p(0) \underbrace{z_{0}}_{=0} \\
+&+\int_{0}^{T}(\underbrace{p(t) D_{x} f(t, x(t), u(t))+\dot{p}(t)}_{\text {动态条件 } p}) z(t) \mathrm{d} t
+  \end{split}
+\end{align*}
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{没有终端约束的PMP推导 }
+\begin{theorem}
+  设$u^*$ 是最优控制,$x^*$是相应的状态轨迹,$p:[0,T] \rightarrow \mathbb{R}^{n,*}$是adjoint equation的解
+  $$
+  \dot{p}(t)=-p(t) D_{x} f\left(t, x^{*}(t), u^{*}(t)\right),
+  $$
+  同时满足
+  $$
+  p(T)=\nabla \Psi\left(x^{*}(T)\right).
+  $$
+  则,PMP最大值原理条件为
+  $$
+  p(t) f\left(t, x^{*}(t), u^{*}(t)\right)=\max _{\omega \in U} p(t) f\left(t, x^{*}(t), \omega\right), \quad \text { a.e. } \quad t \in[0, T]
+  $$
+\end{theorem}
+定义 Hamiltonian 为$H(t, x, u, p):=p f(t, x, u)$,那么PMP就是在说满足
+$
+\dot{p}(t)=-D_{x} H\left(t, x^{*}(t), u^{*}(t), p(t)\right), \quad p(T)=\nabla \Psi\left(x^{*}(T)\right)
+$
+最大值条件为
+$$H\left(t, x^{*}(t), u^{*}(t), p(t)\right)=\max _{\omega \in U} H\left(t, x^{*}(t), \omega, p(t)\right), \quad \text { a.e. } \quad t \in[0, T]
+$$
+\end{frame}
+
+\begin{frame}
+\begin{proof}
+  a
+\end{proof}
 \end{frame}
 
 \begin{frame}
