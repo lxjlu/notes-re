@@ -24,7 +24,7 @@
 %       \insertsection \insertsubsection
 %     \end{beamercolorbox}
 %     \begin{beamercolorbox}[wd= .5 \paperwidth, ht=.2cm, dp=1ex]{huibai}
-%       \insertshortauthor[center]      
+%       \insertshortauthor[center]
 %     \end{beamercolorbox}
 %   }
 % }
@@ -33,7 +33,7 @@
 \usetheme{Goettingen}
 % \usetheme{Madrid}
 \title{组会汇报}
-\subtitle{基于Game的交互决策}
+\subtitle{基于Game Theory的交互决策}
 \author{李鑫}
 \institute{吉林大学}
 \date{\today}
@@ -64,13 +64,13 @@
     determine their nature.
   \item Stationary points of $f(x)$, solve $df / dx=0$ for $x$ (Regular
     Calulus).
-  \item Stationary functions of a functional $I[f]$ (function of functions). 
+  \item Stationary functions of a functional $I[f]$ (function of functions).
   \item Solve (usually differential) equation for stationary function $f(x)$
     (Calculus of Variations).
   \item In general, calculus of variations needed to find $y=f(x)$ such that
     this intergral:
     \begin{align}
-      I[f] = \int_{x_1}^{x_2} F( x, y, \frac{dy}{dx} ) dx 
+      I[f] = \int_{x_1}^{x_2} F( x, y, \frac{dy}{dx} ) dx
     \end{align}
     is stationary.
   \end{itemize}
@@ -122,18 +122,18 @@
           \partial F }{ \partial  {y} } \big )  = 0
       \end{split}
     \end{align}.
-    
+
   \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{Euler-Lagrange处理多元函数和约束}
-  
+
 \end{frame}
 
 \begin{frame}
   \frametitle{经典变分法的缺点}
-  
+
 \end{frame}
 
 \begin{frame}
@@ -142,14 +142,14 @@
 
 \begin{frame}
   \frametitle{IQR回顾}
-  
+
   \begin{itemize}
   \item 系统方程，线性系统
     \begin{align}
       \dot{ \boldsymbol{ x } } = \boldsymbol{ A x } + \boldsymbol{ B u }, \quad
       \boldsymbol{x}_0 = \boldsymbol{x}(0)
     \end{align}
-    
+
   \item 代价函数
     \begin{align}
       J(\boldsymbol{x}, x_0) = \frac{1}{2} \boldsymbol{x}^T_T \boldsymbol{S}
@@ -157,20 +157,20 @@
       \boldsymbol{Q} \boldsymbol{x}_t + \boldsymbol{u}^T_t \boldsymbol{R}
       \boldsymbol{u}_t dt
     \end{align}.
-    
+
   \item 问题转换为
     \begin{align}
       J( \boldsymbol{u}^{*}, \boldsymbol{x}_0 ) = \underset{ \boldsymbol{u}
       }{min}  \, J(
       \boldsymbol{u}, \boldsymbol{x}_0 )
     \end{align}.
-    
+
   \item 动态规划
     \begin{align}
        J( \boldsymbol{u}, \boldsymbol{x}_0 ) = \phi( \boldsymbol{x}_{T} ) + \int_0^T
       \Phi( \boldsymbol{x}_t,  \boldsymbol{u}_t, t ) dt
     \end{align}.
-        
+
   \end{itemize}
 \end{frame}
 
@@ -179,19 +179,19 @@
   \begin{itemize}
     \item 定义$t$时刻的值函数，衡量从$t$时刻$\boldsymbol{x}_t$到$T$时刻
       $\boldsymbol{x}_T$在最佳控制下，成本的大小
-    
+
       \begin{align}
         \begin{split}
       V( \boldsymbol{x}_t, t )   &=
       \underset{ \boldsymbol{u} }{min} \,
       \big \{
-      \int_t^T\Phi( \boldsymbol{x}_t,  \boldsymbol{u}_t, t ) dt + \phi( \boldsymbol{x}_{T} ) 
+      \int_t^T\Phi( \boldsymbol{x}_t,  \boldsymbol{u}_t, t ) dt + \phi( \boldsymbol{x}_{T} )
       \big \} \\
       &= \underset{u}{min} \, J(\boldsymbol{u}, \boldsymbol{x}_t ) \\
       &= J(\boldsymbol{u}^{*}, \boldsymbol{x}_t )
       \end{split}
     \end{align}.
-    
+
   \item 在$[t,T]$之间选择任意一个时刻$t'$,则
     \begin{align}
       \label{optim}
@@ -204,12 +204,12 @@
       \int_{t'}^{T}\Phi( \boldsymbol{x}_t,  \boldsymbol{u}_t, t ) dt  +
       \phi( \boldsymbol{x}_{T} )
       \big \} \\
-      \overset{ \textcolor{red} {  最优性原则 } }{=}&  
+      \overset{ \textcolor{red} {  最优性原则 } }{=}&
       \underset{ \boldsymbol{u} }{min} \,
       \big \{
       \int_t^{t'}\Phi( \boldsymbol{x}_t,  \boldsymbol{u}_t, t ) dt  +
       V( \boldsymbol{x}_{t'}, t' )
-      \big \} 
+      \big \}
       \end{split}
     \end{align}
 
@@ -256,10 +256,10 @@
       \Phi(
       \boldsymbol{x}_t,  \boldsymbol{u}_t, t )  + \frac{
       \partial V^T ( \boldsymbol{x}, t  ) } { \partial
-      \boldsymbol{x}  } \, f(\boldsymbol{x}, \boldsymbol{u}, t) 
+      \boldsymbol{x}  } \, f(\boldsymbol{x}, \boldsymbol{u}, t)
       \big \}
     \end{align}.
-    
+
   \end{itemize}
 \end{frame}
 
@@ -283,7 +283,7 @@
       ( \boldsymbol{x}, t )}{ \partial t } }  +
       \underset{u}{min} \big \{
         \frac{1}{2}  \boldsymbol{x}^T_t \boldsymbol{Q} \boldsymbol{x}_t
-        + \frac{1}{2} \boldsymbol{u}^T_t \boldsymbol{R} \boldsymbol{u}_t 
+        + \frac{1}{2} \boldsymbol{u}^T_t \boldsymbol{R} \boldsymbol{u}_t
         + \frac{
       \partial V^T ( \boldsymbol{x}, t  ) } { \partial
       \boldsymbol{x}  } \, ( \boldsymbol{A x} +
@@ -347,7 +347,7 @@
 
 \section{理论支持}
 \begin{frame}
-  
+
 \end{frame}
 \end{document}
 %%% Local Variables:
