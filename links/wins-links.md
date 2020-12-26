@@ -76,6 +76,7 @@
 - [10-725 Optimization Fall 2012](http://www.cs.cmu.edu/~ggordon/10725-F12/schedule.html)
 - [Holistic Numerical Methods](http://nm.mathforcollege.com/topics/shooting_method.html)
 - [Numerical Optimal Control Dr. Moritz Diehl](https://www.syscop.de/teaching/ss2017/numerical-optimal-control)
+- [Introduction to Trajectory Optimization](https://www.youtube.com/watch?v=wlkRYMVUZTs&ab_channel=MatthewKelly)
 - 
 
 ## Julia Language
