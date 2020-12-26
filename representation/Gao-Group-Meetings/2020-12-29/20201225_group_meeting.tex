@@ -1,0 +1,357 @@
+\documentclass[UTF8, aspectratio=169, 10pt]{ctexbeamer}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{multirow}
+\usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% \setmainfont{LMRomanUnsl10-Regular}
+% \setmainfont{Noto Sans Mono CJK JP}
+\setmainfont{黑体}
+
+\setbeamercolor{huibai}{bg=gray, fg=white}
+
+\setbeamertemplate{itemize/enumerate body begin}{\small}
+\setbeamertemplate{itemize/enumerate subbody begin}{\small}
+\setbeamertemplate{itemize/enumerate subsubbody begin}{\normalsize}
+
+% \setbeamertemplate{headline}{
+%   \hbox{
+%     \begin{beamercolorbox}[wd= .5 \paperwidth, ht=.2cm, dp=1ex]{huibai}
+%       \insertsection \insertsubsection
+%     \end{beamercolorbox}
+%     \begin{beamercolorbox}[wd= .5 \paperwidth, ht=.2cm, dp=1ex]{huibai}
+%       \insertshortauthor[center]      
+%     \end{beamercolorbox}
+%   }
+% }
+
+% \useoutertheme{miniframes}
+\usetheme{Goettingen}
+% \usetheme{Madrid}
+\title{组会汇报}
+\subtitle{基于Game的交互决策}
+\author{李鑫}
+\institute{吉林大学}
+\date{\today}
+\begin{document}
+\frame{\titlepage}
+\frame{\tableofcontents}
+
+
+\section{背景}
+\begin{frame}
+  \frametitle{自动驾驶中的决策问题}
+  \begin{itemize}
+  \item 从A到B问题.
+  \item 从A到B，中间加入静态障碍物的问题.
+  \item 从A到B，中间加入动态障碍物的问题.
+  \item 从A到B，中间加入有智力的动态智能体的问题.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{变分法回顾}
+  \begin{itemize}
+  \item To find x corresponding to local minimum ($x_{\min}$)
+    \begin{align}
+      \frac{dy}{dx} = 0
+    \end{align}.
+  \item Solving $f'(x)=0$ gives stationary points - further testing needed to
+    determine their nature.
+  \item Stationary points of $f(x)$, solve $df / dx=0$ for $x$ (Regular
+    Calulus).
+  \item Stationary functions of a functional $I[f]$ (function of functions). 
+  \item Solve (usually differential) equation for stationary function $f(x)$
+    (Calculus of Variations).
+  \item In general, calculus of variations needed to find $y=f(x)$ such that
+    this intergral:
+    \begin{align}
+      I[f] = \int_{x_1}^{x_2} F( x, y, \frac{dy}{dx} ) dx 
+    \end{align}
+    is stationary.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Euler-Lagrange 方程推导}
+  \begin{itemize}
+  \item Suppose $y(x)$ makes $I$ stationary and satisfies the boundary
+    conditions $y(x_1) = y_1, \quad y(x_2) = y_2$.
+  \item Introduce a function $\eta, \quad \eta (x_1) = \eta (x_2) = 0$.
+  \item Define $\bar{y} = \textcolor{red} {y(x)} + \epsilon \eta(x)$ satisfies same boundary
+    conditions as $y(x)$.
+  \item $\bar{y}$ represents a family of curves. $ y(x) $ represents the extremal.
+  \item Find the particular $\bar{y} (x)$ which makes $I( \epsilon ) =
+    \int_{x_1}^{x_2} F( x, \bar{y}, \bar{y}' )$ stationary.
+  \item Since $I$ depends only on $\epsilon$, to make $I$ stationary, set
+    $\frac{dI}{d \epsilon} |_{\epsilon = 0} = 0$,
+
+    \begin{align}
+      \begin{split}
+        & \frac{d}{d \epsilon} |_{\epsilon = 0} \, \int_{x_1}^{x_2} F(x,
+        \bar{y}, \bar{y}' ) dx = 0 \Rightarrow \int_{x_1}^{x_2}
+        \frac{\partial}{\partial
+          \epsilon} F( x, \bar{y}, \bar{y}' ) |_{\epsilon} dx = 0 \\
+        \Rightarrow & \int_{x_1}^{x_2} \big [ \frac{ \partial F }{ \partial
+          \bar{y} } \frac{ \partial \bar{y} }{ \partial \epsilon } + \frac{
+          \partial F }{ \partial \bar{y}' } \frac{ \partial \bar{y}' }{ \partial
+          \epsilon } \big ] |_{\epsilon=0} dx = 0
+        \Rightarrow  \int_{x_1}^{x_2} \big [ \frac{ \partial F }{ \partial
+          \bar{y} } \eta (x) + \frac{
+          \partial F }{ \partial \bar{y}' } \textcolor {blue} {\eta'(x)} \big ] |_{\epsilon=0} dx =
+        0 \\
+        \Rightarrow & \int_{x_1}^{x_2} \big [ \frac{ \partial F }{ \partial
+          \bar{y} } \eta (x) - \frac{d}{dx} \big ( \frac{
+          \partial F }{ \partial \bar{y}' } \big ) \eta(x) \big ] |_{\epsilon=0} dx =
+        0
+        \Rightarrow  \int_{x_1}^{x_2} \big [ \frac{ \partial F }{ \partial
+          \bar{y} }  - \frac{d}{dx} \big ( \frac{
+          \partial F }{ \partial \bar{y}' } \big )  \big ] \eta(x) |_{\textcolor
+          {red} {\epsilon=0} } dx =
+        0  \\
+        \Rightarrow & \int_{x_1}^{x_2} \big [ \frac{ \partial F }{ \partial
+          \textcolor {red} {y} }  - \frac{d}{dx} \big ( \frac{
+          \partial F }{ \partial \textcolor {red} {y} } \big )  \big ] \eta(x)  dx =
+        0
+        \Rightarrow \frac{ \partial F }{ \partial
+          {y} }  - \frac{d}{dx} \big ( \frac{
+          \partial F }{ \partial  {y} } \big )  = 0
+      \end{split}
+    \end{align}.
+    
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Euler-Lagrange处理多元函数和约束}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{经典变分法的缺点}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{庞特里亚金极大值原理}
+\end{frame}
+
+\begin{frame}
+  \frametitle{IQR回顾}
+  
+  \begin{itemize}
+  \item 系统方程，线性系统
+    \begin{align}
+      \dot{ \boldsymbol{ x } } = \boldsymbol{ A x } + \boldsymbol{ B u }, \quad
+      \boldsymbol{x}_0 = \boldsymbol{x}(0)
+    \end{align}
+    
+  \item 代价函数
+    \begin{align}
+      J(\boldsymbol{x}, x_0) = \frac{1}{2} \boldsymbol{x}^T_T \boldsymbol{S}
+      \boldsymbol{ x }_T + \frac{1}{2} \int_0^T \boldsymbol{x}^T_t
+      \boldsymbol{Q} \boldsymbol{x}_t + \boldsymbol{u}^T_t \boldsymbol{R}
+      \boldsymbol{u}_t dt
+    \end{align}.
+    
+  \item 问题转换为
+    \begin{align}
+      J( \boldsymbol{u}^{*}, \boldsymbol{x}_0 ) = \underset{ \boldsymbol{u}
+      }{min}  \, J(
+      \boldsymbol{u}, \boldsymbol{x}_0 )
+    \end{align}.
+    
+  \item 动态规划
+    \begin{align}
+       J( \boldsymbol{u}, \boldsymbol{x}_0 ) = \phi( \boldsymbol{x}_{T} ) + \int_0^T
+      \Phi( \boldsymbol{x}_t,  \boldsymbol{u}_t, t ) dt
+    \end{align}.
+        
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{IQR回顾}
+  \begin{itemize}
+    \item 定义$t$时刻的值函数，衡量从$t$时刻$\boldsymbol{x}_t$到$T$时刻
+      $\boldsymbol{x}_T$在最佳控制下，成本的大小
+    
+      \begin{align}
+        \begin{split}
+      V( \boldsymbol{x}_t, t )   &=
+      \underset{ \boldsymbol{u} }{min} \,
+      \big \{
+      \int_t^T\Phi( \boldsymbol{x}_t,  \boldsymbol{u}_t, t ) dt + \phi( \boldsymbol{x}_{T} ) 
+      \big \} \\
+      &= \underset{u}{min} \, J(\boldsymbol{u}, \boldsymbol{x}_t ) \\
+      &= J(\boldsymbol{u}^{*}, \boldsymbol{x}_t )
+      \end{split}
+    \end{align}.
+    
+  \item 在$[t,T]$之间选择任意一个时刻$t'$,则
+    \begin{align}
+      \label{optim}
+      \begin{split}
+        V( \boldsymbol{x}_t, t )
+        =&
+      \underset{ \boldsymbol{u} }{min} \,
+      \big \{
+      \int_t^{t'}\Phi( \boldsymbol{x}_t,  \boldsymbol{u}_t, t ) dt  +
+      \int_{t'}^{T}\Phi( \boldsymbol{x}_t,  \boldsymbol{u}_t, t ) dt  +
+      \phi( \boldsymbol{x}_{T} )
+      \big \} \\
+      \overset{ \textcolor{red} {  最优性原则 } }{=}&  
+      \underset{ \boldsymbol{u} }{min} \,
+      \big \{
+      \int_t^{t'}\Phi( \boldsymbol{x}_t,  \boldsymbol{u}_t, t ) dt  +
+      V( \boldsymbol{x}_{t'}, t' )
+      \big \} 
+      \end{split}
+    \end{align}
+
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{IQR回顾}
+  \begin{itemize}
+  \item $V( \boldsymbol{x}_{t'}, t' )$ 泰勒展开
+    \begin{align}
+      V( \boldsymbol{x}_{t'}, t' ) = V( \boldsymbol{x}_{t}, t ) + \frac{
+      \partial V^T ( \boldsymbol{x}, t  ) } { \partial
+      \boldsymbol{x}  } \, \dot { \boldsymbol{x} }  \Delta t + \frac{ \partial V
+      ( \boldsymbol{x}, t )}{ \partial t } \Delta t + \mathcal{O} ( \Delta t^2 )
+    \end{align}.
+  \item $      \int_t^{t'}\Phi( \boldsymbol{x}_t,  \boldsymbol{u}_t, t ) dt$ 泰
+    勒展开
+    \begin{align}
+            \int_t^{t'}\Phi( \boldsymbol{x}_t,  \boldsymbol{u}_t, t ) dt = \Phi(
+      \boldsymbol{x}_t,  \boldsymbol{u}_t, t ) \Delta t + \mathcal{O} (\Delta
+      t^2 )
+    \end{align}.
+  \item 带入公式 (\ref{optim})得
+    \begin{align}
+      V( \boldsymbol{x}, t ) = \underset{u}{min} \big \{
+      \Phi(
+      \boldsymbol{x}_t,  \boldsymbol{u}_t, t ) \Delta t + \textcolor{blue} { V(
+      \boldsymbol{x}_{t}, t ) } + \frac{
+      \partial V^T ( \boldsymbol{x}, t  ) } { \partial
+      \boldsymbol{x}  } \, \dot { \boldsymbol{x} }  \Delta t + \textcolor{blue} { \frac{ \partial V
+      ( \boldsymbol{x}, t )}{ \partial t } } \Delta t
+      + \mathcal{O} (\Delta
+      t^2 )
+      \big \}
+    \end{align}.
+  \item 对于上面公式，蓝色的和$u$无关，提出来化简得到
+    \begin{align}
+      \label{hjb}
+      0 = \textcolor{blue} { \frac{ \partial V
+      ( \boldsymbol{x}, t )}{ \partial t } }  +
+      \underset{u}{min} \big \{
+      \Phi(
+      \boldsymbol{x}_t,  \boldsymbol{u}_t, t )  + \frac{
+      \partial V^T ( \boldsymbol{x}, t  ) } { \partial
+      \boldsymbol{x}  } \, f(\boldsymbol{x}, \boldsymbol{u}, t) 
+      \big \}
+    \end{align}.
+    
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{LQR回顾}
+  \begin{itemize}
+  \item 如果是线性方程且性能指标为二次
+    \begin{align}
+      \begin{split}
+        f( \boldsymbol{x}, \boldsymbol{u}, t ) = \boldsymbol{A x} +
+        \boldsymbol{B u} \\
+        \int_0^T \Phi ( \boldsymbol{x}_t,  \boldsymbol{u}_t, t ) dt  =
+        \frac{1}{2} \int_0^T \boldsymbol{x}^T_t \boldsymbol{Q} \boldsymbol{x}_t
+        + \boldsymbol{u}^T_t \boldsymbol{R} \boldsymbol{u}_t dt
+      \end{split}
+    \end{align}.
+  \item 公式(\ref{hjb}) 为
+      \begin{align}
+      \label{linear-hjb}
+      0 = \textcolor{blue} { \frac{ \partial V
+      ( \boldsymbol{x}, t )}{ \partial t } }  +
+      \underset{u}{min} \big \{
+        \frac{1}{2}  \boldsymbol{x}^T_t \boldsymbol{Q} \boldsymbol{x}_t
+        + \frac{1}{2} \boldsymbol{u}^T_t \boldsymbol{R} \boldsymbol{u}_t 
+        + \frac{
+      \partial V^T ( \boldsymbol{x}, t  ) } { \partial
+      \boldsymbol{x}  } \, ( \boldsymbol{A x} +
+        \boldsymbol{B u} )
+      \big \}
+    \end{align}.
+
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{交互式决策如何做}
+  \begin{itemize}
+  \item 把其他智能体当作一个扰动-鲁棒控制.
+  \item 把其他智能体的动作考虑到模型-博弈理论.
+  \item 基于数据的-MARL.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{简单的连续博弈控制问题}
+  \begin{itemize}
+  \item 两辆车一追一逃，以相互距离为性能指标.
+  \item 在系统中，状态的变换和性质指标都是由二者共同决定.
+  \item $x_1^i$表示第$i$个智能体的位置，$x_2^i$表示第$i$个智能体的速度.
+  \item $u^{(i)}$表示第$i$个智能体的加速度.
+  \item 数学表达
+    \begin{align}
+      \left\{\begin{matrix}
+          \dot{x}_1^{(1)} (t) = x_2^{(1)} (t), \\
+          \dot{x}_2^{(1)} (t) = u^{(1)} (t). \\
+        \end{matrix}\right.
+      \quad \quad \quad
+      \left\{\begin{matrix}
+          \dot{x}_1^{(2)} (t) = x_2^{(2)} (t), \\
+          \dot{x}_2^{(2)} (t) = u^{(2)} (t). \\
+        \end{matrix}\right.
+    \end{align}.
+  \item 性质指标为
+    \begin{align}
+      J(u^{(1)}, u^{(2)}） = \| x_1^{(1)} (t_f) - x_2^{(2)} (t_f) \|
+      J_1
+    \end{align}
+  \end{itemize}
+\end{frame}
+
+\section{问题构建}
+\begin{frame}
+\frametitle{考虑简单的换道问题}
+  如何将这样的问题转换为数学模型
+\end{frame}
+
+\section{算法设计}
+\begin{frame}
+
+  如何保证得到有效的策略
+\end{frame}
+
+
+
+
+\section{理论支持}
+\begin{frame}
+  
+\end{frame}
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-engine: xetex
+%%% End:
