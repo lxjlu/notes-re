@@ -9,9 +9,11 @@
 \usepackage{amssymb}
 \usepackage{tikz}
 \usepackage{subfigure}
-\usepackage{amsthm,amsfonts}
-
-
+\usepackage{amsthm,amsfonts,mathtools}
+%\usepackage[noend]{algpseudocode}
+%\usepackage{algorithmicx,algorithm}
+\usepackage[ruled]{algorithm2e}
+\usepackage{textpos}
 
 % \setmainfont{LMRomanUnsl10-Regular}
 % \setmainfont{Noto Sans Mono CJK JP}
@@ -20,6 +22,7 @@
 % \useoutertheme{miniframes}
 \usetheme{Goettingen}
 % \usetheme{Madrid}
+% \usetheme{Berkeley}
 \title{组会汇报}
 \subtitle{基于Game Theory的交互决策}
 \author{李鑫}
@@ -31,8 +34,9 @@
 
 
 \section{背景}
+\subsection{自动驾驶中的决策/规划问题}
 \begin{frame}
- \frametitle{自动驾驶中的决策/规划问题}
+ \frametitle{示意问题}
 \begin{figure}[htbp]
 \centering
 
@@ -72,20 +76,21 @@
 \end{figure}
 \end{frame}
 
-
+\subsection{最优控制回顾}
+\subsubsection{经典变分}
 \begin{frame}
   \frametitle{变分法回顾}
   \begin{itemize}
   \item 寻找$f(x)$的局部极小点的必要条件($x_{\min}$)
-    \begin{align}
+    \begin{align*}
       \frac{dy}{dx} = 0
-    \end{align}.
+    \end{align*}.
   \item 只能得到驻点/临界点(stationary/critial points),需要进一步验证.
   \item 对于泛函($I[f]$),可以通过类似方法得到Stationary functions of a functional.
   \item 一般而言, 通过需找一个函数 $y=f(x)$ 使得下面的积分:
-    \begin{align}
+    \begin{align*}
       I[f] = \int_{x_1}^{x_2} F( x, y, \frac{dy}{dx} ) dx
-    \end{align}
+    \end{align*}
     stationary.
   \end{itemize}
 \end{frame}
@@ -137,9 +142,9 @@
   \end{itemize}
 \end{frame}
 
-
+\subsubsection{PMP必要条件}
 \begin{frame}
-  \frametitle{庞特里亚金极大值原理}
+  \frametitle{庞特里亚金极大值原理回顾}
   \begin{itemize}
     \item 一般优化控制问题
     \begin{align}
@@ -158,7 +163,7 @@
     $$
     \item Mayer form
     $$ \Psi(T, x(T))
-    $$ 
+    $$
   \end{itemize}
 \end{frame}
 
@@ -219,12 +224,12 @@ $$
    &= \nabla \Psi(x^*(T)) \frac{\partial}{\partial \epsilon} \bigg |_{\epsilon=0_+} x_{\epsilon}(T) = p(T) \frac{\partial}{\partial \epsilon} \bigg |_{\epsilon=0_+} x_{\epsilon}(T)
   \end{split}
   \end{align*}
-  
+
   但是我们想要得到的是
   $$
   0 \geq p(\tau)\left(f\left(\tau, x^{*}(\tau), \omega\right)-f\left(\tau, x^{*}(\tau), u^{*}(\tau)\right)\right), \text { a.e. on }[0, T], \quad \text { for all } \omega \in U
   $$
-  
+
   下面从局部最优条件推导出结论需要两个工具
   \begin{itemize}
     \item The adjoint and the variational equations：
@@ -232,7 +237,7 @@ $$
     \item Perturbations of optimal control: needle variations：
     推导出最优性
   \end{itemize}
-  
+
 
 \end{frame}
 
@@ -271,7 +276,7 @@ $$
 目前为止我们得到的条件有
 $$
 0 \geq\left. p(T) \frac{\partial}{\partial \varepsilon}\right|_{\varepsilon=0^{+}} x_{\varepsilon}(T)
-\Rightarrow 
+\Rightarrow
 0 \geq\left. p(\tau) \frac{\partial}{\partial \varepsilon}\right|_{\varepsilon=0^{+}} x_{\varepsilon}(\tau)
 $$
 我们想证明是
@@ -315,57 +320,34 @@ $$
   \frac{1}{\varepsilon} \int_{\tau-\varepsilon}^{\tau} f\left(t, x^{*}(t), u^{*}(t)\right) \mathrm{d} t \underset{\varepsilon \rightarrow 0^{+}}{\longrightarrow} f\left(\tau, x^{*}(\tau), u^{*}(\tau)\right)
   $$
   如果$\tau$是$t \mapsto f(t, x^*(t),u^*(t))$的Lebesgue point那么我们可以得到：
-  
-  \begin{align}
+
+  \begin{align*}
     \begin{split}
         \frac{1}{\varepsilon} \int_{\tau-\varepsilon}^{\tau} &\left(f\left(t, x_{\varepsilon}(t), \omega\right)-f\left(\tau, x_{\varepsilon}(\tau), \omega\right)\right) \mathrm{d} t \\
         &=\frac{1}{\varepsilon} \int_{\tau-\varepsilon}^{\tau}\left(f\left(t, x_{\varepsilon}(t), \omega\right)-f\left(t, x_{\varepsilon}(\tau), \omega\right)+f\left(t, x_{\varepsilon}(\tau), \omega\right)-f\left(\tau, x_{\varepsilon}(t), \omega\right)\right) \mathrm{d} t \\
         & \leq \frac{1}{\varepsilon} \int_{\tau-\varepsilon}^{\tau}\left(L\left|x_{\varepsilon}(t)-x_{\varepsilon}(\tau)\right|+f\left(t, x_{\varepsilon}(\tau), \omega\right)-f\left(\tau, x_{\varepsilon}(\tau), \omega\right)\right) \mathrm{d} t \underset{\varepsilon \rightarrow 0^{+}}{\longrightarrow} 0
     \end{split}
-  \end{align}
+  \end{align*}
 
 
 \end{proof}
 \end{frame}
 
 
+
+
+\subsubsection{HJB充分条件}
 \begin{frame}
-  \frametitle{IQR回顾}
-
+  \frametitle{HJB方程回顾}
   \begin{itemize}
-  \item 系统方程，线性系统
-    \begin{align}
-      \dot{ \boldsymbol{ x } } = \boldsymbol{ A x } + \boldsymbol{ B u }, \quad
-      \boldsymbol{x}_0 = \boldsymbol{x}(0)
-    \end{align}
-
-  \item 代价函数
-    \begin{align}
-      J(\boldsymbol{x}, x_0) = \frac{1}{2} \boldsymbol{x}^T_T \boldsymbol{S}
-      \boldsymbol{ x }_T + \frac{1}{2} \int_0^T \boldsymbol{x}^T_t
-      \boldsymbol{Q} \boldsymbol{x}_t + \boldsymbol{u}^T_t \boldsymbol{R}
-      \boldsymbol{u}_t dt
-    \end{align}.
-
-  \item 问题转换为
-    \begin{align}
-      J( \boldsymbol{u}^{*}, \boldsymbol{x}_0 ) = \underset{ \boldsymbol{u}
+    \item 问题可以看做从状态$x_0$开始挑选出一个$u$使得代价函数最小
+    $$
+    J( \boldsymbol{u}^{*}, \boldsymbol{x}_0 ) = \underset{ \boldsymbol{u}
       }{min}  \, J(
-      \boldsymbol{u}, \boldsymbol{x}_0 )
-    \end{align}.
-
-  \item 动态规划
-    \begin{align}
-       J( \boldsymbol{u}, \boldsymbol{x}_0 ) = \phi( \boldsymbol{x}_{T} ) + \int_0^T
+      \boldsymbol{u}, \boldsymbol{x}_0 ) =
+      \phi( \boldsymbol{x}_{T} ) + \int_0^T
       \Phi( \boldsymbol{x}_t,  \boldsymbol{u}_t, t ) dt
-    \end{align}.
-
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{IQR回顾}
-  \begin{itemize}
+    $$
     \item 定义$t$时刻的值函数，衡量从$t$时刻$\boldsymbol{x}_t$到$T$时刻
       $\boldsymbol{x}_T$在最佳控制下，成本的大小
 
@@ -407,7 +389,7 @@ $$
 \end{frame}
 
 \begin{frame}
-  \frametitle{IQR回顾}
+  \frametitle{HJB回顾}
   \begin{itemize}
   \item $V( \boldsymbol{x}_{t'}, t' )$ 泰勒展开
     \begin{align}
@@ -448,10 +430,31 @@ $$
       \boldsymbol{x}  } \, f(\boldsymbol{x}, \boldsymbol{u}, t)
       \big \}
     \end{align}.
-
   \end{itemize}
 \end{frame}
 
+\begin{frame}
+\frametitle{HJB回顾}
+\begin{itemize}
+  \item 最后一项即为PMP中Hamiltonian,定义$\frac{\partial V(\mathbf{x}, t)}{\partial t}=V_{t}, \frac{\partial V^{T}(\mathbf{x}, t)}{\partial \mathbf{x}}=V_{\mathbf{x}}$.可得到
+
+      $$
+      H(\boldsymbol{x}^*, \boldsymbol{u}, t) = \Phi(
+      \boldsymbol{x^*}_t,  \boldsymbol{u}_t, t )  + \frac{
+      \partial V^T ( \boldsymbol{x^*}, t  ) } { \partial
+      \boldsymbol{x}  } \, f(\boldsymbol{x^*}, \boldsymbol{u}, t)
+      $$
+  \item HJB方程为
+  $$
+  - V_t = \underset{u}{min} H(\boldsymbol{x}^*, \boldsymbol{u}, t)
+  $$
+  同时满足终端条件$ V(\boldsymbol{x}, T) = \phi( \boldsymbol{x}_{T} )$.
+  \item 只有极少情况能直接算出HJB方程的解析解.
+  \item 有很多数值近似算法.
+\end{itemize}
+\end{frame}
+
+\subsubsection{线性二次型}
 \begin{frame}
   \frametitle{LQR回顾}
   \begin{itemize}
@@ -463,66 +466,191 @@ $$
         \int_0^T \Phi ( \boldsymbol{x}_t,  \boldsymbol{u}_t, t ) dt  =
         \frac{1}{2} \int_0^T \boldsymbol{x}^T_t \boldsymbol{Q} \boldsymbol{x}_t
         + \boldsymbol{u}^T_t \boldsymbol{R} \boldsymbol{u}_t dt
+        + \frac{1}{2} \boldsymbol{x}^{T}(T) P_{1} \boldsymbol{x}(T)
       \end{split}
     \end{align}.
-  \item 公式(\ref{hjb}) 为
-      \begin{align}
-      \label{linear-hjb}
-      0 = \textcolor{blue} { \frac{ \partial V
-      ( \boldsymbol{x}, t )}{ \partial t } }  +
-      \underset{u}{min} \big \{
-        \frac{1}{2}  \boldsymbol{x}^T_t \boldsymbol{Q} \boldsymbol{x}_t
-        + \frac{1}{2} \boldsymbol{u}^T_t \boldsymbol{R} \boldsymbol{u}_t
-        + \frac{
-      \partial V^T ( \boldsymbol{x}, t  ) } { \partial
-      \boldsymbol{x}  } \, ( \boldsymbol{A x} +
-        \boldsymbol{B u} )
-      \big \}
-    \end{align}.
-
+  \item 通过PMP求解,
+  \begin{align}
+  \begin{split}
+  H= & x^{T} Q x+u^{T} R u+\lambda^{T}(A x+B u) \\
+  \dot{x}=\left(\frac{\partial H}{\partial \lambda}\right)^{T} & \quad=A x+B u \quad x(0)=x_{0} \\
+  -\dot{\lambda}=\left(\frac{\partial H}{\partial x}\right)^{T} & \quad=Q x+A^{T} \lambda \quad \lambda(T)=P_{1} x(T) \\
+  0=\frac{\partial H}{\partial u} & \quad=R u+\lambda^{T} B \quad \Rightarrow \quad u=-R^{-1} B^{T} \lambda
+  \end{split}
+  \end{align}.
+  \item 带回去得到现在的系统方程为
+  $$
+  \left[\begin{array}{c}
+    \dot{\boldsymbol{x}} \\
+    \dot{\lambda}
+    \end{array}\right]=\left[\begin{array}{cc}
+    A & -B R^{-1} B^{T} \\
+    -Q & -A^{T}
+    \end{array}\right]\left[\begin{array}{c}
+    \boldsymbol{x} \\
+    \lambda
+  \end{array}\right]
+  $$
   \end{itemize}
 \end{frame}
 
 \begin{frame}
-  \frametitle{交互式决策如何做}
+  \frametitle{LQR回顾}
   \begin{itemize}
-  \item 把其他智能体当作一个扰动-鲁棒控制.
-  \item 把其他智能体的动作考虑到模型-博弈理论.
-  \item 基于数据的-MARL.
+    \item 这样的系统(两边有边值)可以用数值方法求解.
+    \item 但是我们面对的是线性二次的系统,由经验知道反馈控制为状态的线性反馈.
+    \item 假设$\lambda = Px, K = R^{-1} B^{T} P$,则动态系统为
+    \begin{align}
+      \begin{split}
+      \dot{x}=\left(A-B R^{-1} B^{T} P\right) x \\
+      \dot{P} x+P \dot{x}=\left(-Q-A^{T} P\right) x \\
+      P \dot{x}=\left(-\dot{P}-Q-A^{T} P\right) x
+      \end{split}
+    \end{align}.
+    \item 可以得到 Ricatti微分方程
+    $$
+    \begin{array}{l}
+    \dot{P}=-A^{T} P-P A-Q+P B R^{-1} B^{T} P \\
+    K=-R^{-1} B^{\top} P
+    \end{array}
+    $$.
+    \item 进一步假设$\dot{P}=0$可以得到 Ricatti代数方程
+    $$
+    \begin{array}{l}
+    0=-A^{T} P-P A-Q+P B R^{-1} B^{T} P \\
+    K=-R^{-1} B^{T} P
+\end{array}
+    $$
   \end{itemize}
 \end{frame}
 
+\subsubsection{iLQR}
 \begin{frame}
-  \frametitle{简单的连续博弈控制问题}
-  \begin{itemize}
-  \item 两辆车一追一逃，以相互距离为性能指标.
-  \item 在系统中，状态的变换和性质指标都是由二者共同决定.
-  \item $x_1^i$表示第$i$个智能体的位置，$x_2^i$表示第$i$个智能体的速度.
-  \item $u^{(i)}$表示第$i$个智能体的加速度.
-  \item 数学表达
-    \begin{align}
-      \left\{\begin{matrix}
-          \dot{x}_1^{(1)} (t) = x_2^{(1)} (t), \\
-          \dot{x}_2^{(1)} (t) = u^{(1)} (t). \\
-        \end{matrix}\right.
-      \quad \quad \quad
-      \left\{\begin{matrix}
-          \dot{x}_1^{(2)} (t) = x_2^{(2)} (t), \\
-          \dot{x}_2^{(2)} (t) = u^{(2)} (t). \\
-        \end{matrix}\right.
-    \end{align}.
-  \item 性质指标为
-    \begin{align}
-      J(u^{(1)}, u^{(2)}） = \| x_1^{(1)} (t_f) - x_2^{(2)} (t_f) \|
-      J_1
-    \end{align}
-  \end{itemize}
+\frametitle{非线性系统的LQR控制}
+\begin{itemize}
+  \item 对于非线性系统
+  $$
+  x_{t+1} = f(x_t, u_t)
+  $$
+  我们可以在系统平稳点处线性化，假设存在平稳状态$x^*
+$ 使得
+$$
+  \exists u^* \, s.t.  \quad x^* = f(x^*, u^*)
+  $$
+  线性化系统可得
+  $$
+  x_{t+1} \approx f(x^*,u^*) +\underbrace{ \frac{\partial f}{\partial x}(x^*, u^*)}_{A} (x_t - x^*) + \underbrace{ \frac{\partial f}{\partial u }(x^*, u^*)}_{B}(u_t - u^*)
+  $$
+  改写为
+  $$
+  x_{t+1} - x^* \approx A(x_t - x^*) + B (u_t - u^*)
+  $$.
+  \item 写成标准LQR形式,设$z_t = x_t - x^*, v_t = u_t - u^* $则
+  \begin{align}
+  \begin{split}
+     &z_{t+1} =  A z_t + B v_t, \qquad \text{cost}=z^T_t Q z_t + v^T_t R  \\
+     &v_t = K z_t \Rightarrow u_t = u^* + K(x_t - x^*)
+  \end{split}
+  \end{align}
+\end{itemize}
 \end{frame}
+
+\begin{frame}
+\frametitle{非线性系统的LQR控制}
+\begin{algorithm}[H]
+\caption{iLQR}%算法名字
+\LinesNumbered %要求显示行号
+\KwIn{初始控制率$\pi^{(0)}$}%输入参数
+\KwOut{最优控制率$\pi^*$}%输出
+\While{$\| V^{k} - V^{k+1} \| \ge \epsilon$}
+{
+    执行控制策略$\pi^{i}$,记录得到的state-input轨迹 $x^ {(i)}_0,u^{(i)}_0,x^ {(i)}_1,u^{(i)}_1, \cdots $ \;
+    在上述轨迹上线性近似，然后用标准LQR技术来得到下一步的控制策略 \;
+    重复第一步 \;
+    }
+\end{algorithm}
+Notes
+\begin{itemize}
+  \item 实际中为了速度和精度,会对步长做限定,类似信赖域法.
+  \item 如果$f$非线性,很有可能落入局部最优.
+  \item 如果$g$非凸,LQ近似中对半定矩阵的要求可能达不到，如要做进一步处理.
+\end{itemize}
+\end{frame}
+%\subsection{交互式决策}
+%\begin{frame}
+%  \frametitle{交互式决策如何做}
+%  \begin{itemize}
+%  \item 把其他智能体当作一个扰动-鲁棒控制.
+%  \item 把其他智能体的动作考虑到模型-博弈理论.
+%  \item 基于数据的-MARL.
+%  \end{itemize}
+% \end{frame}
+
 
 \section{问题构建}
 \begin{frame}
-\frametitle{考虑简单的换道问题}
-  如何将这样的问题转换为数学模型
+\frametitle{线性建模-简单换道}
+\begin{textblock}{3}(8,-4)
+    \includegraphics[width=5cm]{huandao.jpg}
+\end{textblock}
+  首选对整个系统建模(LQ微分博弈)：
+  $$
+  \dot{x}(t) = A x(t) + B_1 u_1(t) + B_2 u_2(t), \quad x(0) = x_0,
+  $$
+  对于player 1(智能体,这里假设2个),对应的二次型性能函数为
+  $$
+  J_1(u_1,u_2) = \int_{0}^{T} \{ x^T(t) Q_1 x(t) + u^T_1(t) R_{11} u_1(t) + u^T_2(t) R_{12} u_2(t)  \} dt + x^T(T) Q_{1T} x(T),
+  $$
+  对player 2
+  $$
+  J_2(u_1,u_2) = \int_{0}^{T} \{ x^T(t) Q_2 x(t) + u^T_1(t) R_{21} u_1(t) + u^T_2(t) R_{22} u_2(t)  \} dt + x^T(T) Q_{2T} x(T),
+  $$
+  所有的矩阵都是对称矩阵，并且$R_{ii}$必须是正定矩阵.为了方便记号，记$S_i=B_i R^{-1}_{ii} B^T_i$
+\end{frame}
+
+\begin{frame}
+\frametitle{LQ-Game}
+\begin{itemize}
+\item 定理
+
+
+  定义矩阵
+  $$
+  M \coloneqq \begin{bmatrix}
+  A &  -S_1 & -S_2 \\
+ -Q_1 & -A^T & 0\\
+ -Q_2 & 0 & -A^T
+\end{bmatrix}
+  $$
+  假设两个Riccati微分方程
+  $$
+  \dot{K}_i(t) = - A^T K_i(t) A + K_i (t) S_i K_i(t) - Q_i, \, K_i(T) = Q_{iT}, \quad i=1,2
+  $$
+  有解且为对称阵$K_i(.)$.那么当
+  $$
+  H(T) \coloneqq \begin{bmatrix} I & 0 & 0 \end{bmatrix} e^{- M T} \begin{bmatrix} I \\ Q_{1T} \\ Q_{2T} \end{bmatrix}
+  $$
+  可逆时候,这个LQ微分博弈就有唯一的一个open-loop纳什均衡解(for every initial state $x_0$).这个解和对应的状态轨迹可以通过求解如下边值问题
+  $$
+  \dot{y}(t) = M y(t), \qquad P y(0) + Q y(T) = \begin{bmatrix} x^T_0 & 0 & 0 \end{bmatrix}^T
+  $$
+
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{LQ-Game}
+\begin{itemize}
+\item
+  其中$y(t) = \begin{bmatrix} y^T_0(t) & y^T_1(t) & y^T_2(t) \end{bmatrix}^T, \, y_0 \in \mathbb{R}^n, \, y_i \in \mathbb{R}^{m_i}, i=1,2$, 均衡轨迹和控制率为
+  $$
+  x(t) = y_0(t), \qquad u_i(t) = - R^{-1}_{ii} B^T_i y_i(t), \quad i=1,2
+  $$
+
+  \item 证明
+  
+  其中
+\end{itemize}
 \end{frame}
 
 \section{算法设计}
