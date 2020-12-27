@@ -209,10 +209,125 @@ $$
 \end{frame}
 
 \begin{frame}
-\begin{proof}
-  a
+\frametitle{证明 }
+
+  在$L1$意义下局部最优:存在$\epsilon > 0$使得在$\| u - u^* \|_1$可行域$(x,u)$内存在最优局部解为$(x^*, u^*)$.
+  对于$\{ (x_{\epsilon}, u_{\epsilon}) \}_{\epsilon > 0 }$ 一族轨迹控制对, 假设$u_{\epsilon}$在$L1$意义下$\epsilon \rightarrow 0_+$ 趋近与$u^*$, 则我们可以得到
+  \begin{align*}
+  \begin{split}
+  0 \ge \frac{\partial}{\partial \epsilon} \bigg |_{\epsilon=0_+} \Psi( x_{\epsilon}(T) ) & = \lim_{\epsilon \to 0_+} \frac{\Psi(x_{\epsilon}(T)) - \Psi( x^*(T) )}{\epsilon} \\
+   &= \nabla \Psi(x^*(T)) \frac{\partial}{\partial \epsilon} \bigg |_{\epsilon=0_+} x_{\epsilon}(T) = p(T) \frac{\partial}{\partial \epsilon} \bigg |_{\epsilon=0_+} x_{\epsilon}(T)
+  \end{split}
+  \end{align*}
+  
+  但是我们想要得到的是
+  $$
+  0 \geq p(\tau)\left(f\left(\tau, x^{*}(\tau), \omega\right)-f\left(\tau, x^{*}(\tau), u^{*}(\tau)\right)\right), \text { a.e. on }[0, T], \quad \text { for all } \omega \in U
+  $$
+  
+  下面从局部最优条件推导出结论需要两个工具
+  \begin{itemize}
+    \item The adjoint and the variational equations：
+    推导出符号一致性
+    \item Perturbations of optimal control: needle variations：
+    推导出最优性
+  \end{itemize}
+  
+
+\end{frame}
+
+\begin{frame}
+\frametitle{证明（继续） }
+
+(1)对于$y \in \mathbb{R}^n$,$v:[\tau, T] \to \mathbb{R}^m$是PDE
+$$
+\dot{v}(t)=D_{x} f\left(t, x^{*}(t), u^{*}(t)\right) v(t), \qquad v(\tau)=\mathrm{y}
+$$
+的解,构造$x_{\varepsilon}(\tau)=x^{*}(\tau)+\varepsilon \mathbf{y}+o(\varepsilon)$.那么对于所有$t \ge \tau , $
+$$
+v(t)=\left.\frac{\partial}{\partial \varepsilon}\right|_{\varepsilon=0^{+}} x_{\varepsilon}(t)
+$$
+
+\begin{figure}
+  \centering
+  \includegraphics[width=8cm]{variationalequation.png}
+  \caption{from Bressan-Piccolo's book}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{证明（继续） }
+对于这样的方程
+$$
+\left\{\begin{array}{l}
+\dot{v}(t)=D_{x} f\left(t, x^{*}(t), u^{*}(t)\right) v(t) \\
+\dot{p}(t)=-p(t) D_{x} f\left(t, x^{*}(t), u^{*}(t)\right)
+\end{array}\right.
+$$
+我们可以得到
+$$
+t \mapsto p(t) \cdot v(t) \text { is constant. }
+$$
+目前为止我们得到的条件有
+$$
+0 \geq\left. p(T) \frac{\partial}{\partial \varepsilon}\right|_{\varepsilon=0^{+}} x_{\varepsilon}(T)
+\Rightarrow 
+0 \geq\left. p(\tau) \frac{\partial}{\partial \varepsilon}\right|_{\varepsilon=0^{+}} x_{\varepsilon}(\tau)
+$$
+我们想证明是
+$$
+0 \geq p(\tau)\left(f\left(\tau, x^{*}(\tau), \omega\right)-f\left(\tau, x^{*}(\tau), u^{*}(\tau)\right)\right)
+$$
+那么现在只要证明
+$$
+\left.\frac{\partial}{\partial \varepsilon}\right|_{\varepsilon=0^{+}} x_{\varepsilon}(\tau)=\underbrace{f\left(\tau, x^{*}(\tau), \omega\right)-f\left(\tau, x^{*}(\tau), u^{*}(\tau)\right)}_{\mathrm{y}}.
+$$
+\end{frame}
+
+\begin{frame}
+\frametitle{证明（继续） }
+定义needle variations, 对于$\tau \in (0,T], \omega \in U, 0 < \epsilon < \tau$
+$$
+u_{\varepsilon}(t):=\left\{\begin{array}{cl}
+\omega, & \text { if } t \in[\tau-\varepsilon, \tau] \\
+u^{*}(t), & \text { if not. }
+\end{array}\right.
+$$
+\begin{figure}
+  \centering
+  \includegraphics[width=8cm]{needle.png}
+\end{figure}
+
+我们宣称(Claim)：
+$$
+\left.\frac{\partial}{\partial \varepsilon}\right|_{\varepsilon=0^{+}} x_{\varepsilon}(\tau)=f\left(\tau, x^{*}(\tau), \omega\right)-f\left(\tau, x^{*}(\tau), u^{*}(\tau)\right), \quad \text { for a.e. } \tau \in(0, T].
+$$
+\end{frame}
+
+\begin{frame}
+\begin{proof}[证明（最后一页）]
+  由定义可知
+  $$
+  \frac{x_{\varepsilon}(\tau)-x^{*}(\tau)}{\varepsilon}=\frac{1}{\varepsilon}\left\{\int_{\tau-\varepsilon}^{\tau} f\left(t, x_{\varepsilon}(t), \omega\right) \mathrm{d} t-\int_{\tau-\varepsilon}^{\tau} f\left(t, x^{*}(t), u^{*}(t)\right) \mathrm{d} t\right\}
+  $$
+  很容易可以观察到后面一项：
+  $$
+  \frac{1}{\varepsilon} \int_{\tau-\varepsilon}^{\tau} f\left(t, x^{*}(t), u^{*}(t)\right) \mathrm{d} t \underset{\varepsilon \rightarrow 0^{+}}{\longrightarrow} f\left(\tau, x^{*}(\tau), u^{*}(\tau)\right)
+  $$
+  如果$\tau$是$t \mapsto f(t, x^*(t),u^*(t))$的Lebesgue point那么我们可以得到：
+  
+  \begin{align}
+    \begin{split}
+        \frac{1}{\varepsilon} \int_{\tau-\varepsilon}^{\tau} &\left(f\left(t, x_{\varepsilon}(t), \omega\right)-f\left(\tau, x_{\varepsilon}(\tau), \omega\right)\right) \mathrm{d} t \\
+        &=\frac{1}{\varepsilon} \int_{\tau-\varepsilon}^{\tau}\left(f\left(t, x_{\varepsilon}(t), \omega\right)-f\left(t, x_{\varepsilon}(\tau), \omega\right)+f\left(t, x_{\varepsilon}(\tau), \omega\right)-f\left(\tau, x_{\varepsilon}(t), \omega\right)\right) \mathrm{d} t \\
+        & \leq \frac{1}{\varepsilon} \int_{\tau-\varepsilon}^{\tau}\left(L\left|x_{\varepsilon}(t)-x_{\varepsilon}(\tau)\right|+f\left(t, x_{\varepsilon}(\tau), \omega\right)-f\left(\tau, x_{\varepsilon}(\tau), \omega\right)\right) \mathrm{d} t \underset{\varepsilon \rightarrow 0^{+}}{\longrightarrow} 0
+    \end{split}
+  \end{align}
+
+
 \end{proof}
 \end{frame}
+
 
 \begin{frame}
   \frametitle{IQR回顾}
