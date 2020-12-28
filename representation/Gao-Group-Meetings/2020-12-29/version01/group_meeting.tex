@@ -14,6 +14,7 @@
 %\usepackage{algorithmicx,algorithm}
 \usepackage[ruled]{algorithm2e}
 \usepackage{textpos}
+\usepackage{url}
 
 % \setmainfont{LMRomanUnsl10-Regular}
 % \setmainfont{Noto Sans Mono CJK JP}
@@ -461,9 +462,9 @@ $$
   \item 如果是线性方程且性能指标为二次
     \begin{align}
       \begin{split}
-        f( \boldsymbol{x}, \boldsymbol{u}, t ) = \boldsymbol{A x} +
+        f( \boldsymbol{x}, \boldsymbol{u}, t ) &= \boldsymbol{A x} +
         \boldsymbol{B u} \\
-        \int_0^T \Phi ( \boldsymbol{x}_t,  \boldsymbol{u}_t, t ) dt  =
+        \int_0^T \Phi ( \boldsymbol{x}_t,  \boldsymbol{u}_t, t ) dt  &=
         \frac{1}{2} \int_0^T \boldsymbol{x}^T_t \boldsymbol{Q} \boldsymbol{x}_t
         + \boldsymbol{u}^T_t \boldsymbol{R} \boldsymbol{u}_t dt
         + \frac{1}{2} \boldsymbol{x}^{T}(T) P_{1} \boldsymbol{x}(T)
@@ -647,18 +648,157 @@ Notes
   x(t) = y_0(t), \qquad u_i(t) = - R^{-1}_{ii} B^T_i y_i(t), \quad i=1,2
   $$
 
-  \item 证明
-  
+  \item 证明(部分)
+
+  假设$(u^*_1(.), u^*_2(.))$是纳什均衡,根据PMP原理, Hamiltonian是
+  $$
+  H_i = (x^T Q_i x + u^T_1 R_{i1} u_1 + u^T_2 R_{i2} u_2) + \psi^T_i (Ax + B_1 u_1 + B_2 u_2)
+  $$
+  最小化哈密度量得到
+  \begin{align*}
+    \begin{split}
+      u^*_1 (t) = - R^{-1}_{11} B^T_1 \psi_1 (t), \\
+      u^*_2 (t) = - R^{-1}_{22} B^T_2 \psi_2 (t),
+    \end{split}
+  \end{align*}
   其中
+    \begin{align*}
+    \begin{split}
+    \dot{\psi}_{1}(t) &=-Q_{1} x(t)-A^{T} \psi_{1}(t), \text { with } \psi_{1}(T)=Q_{1 T} x(T) \\
+    \dot{\psi}_{2}(t) &=-Q_{2} x(t)-A^{T} \psi_{2}(t), \text { with } \psi_{2}(T)=Q_{2 T} x(T) \\
+    \dot{x}(t) &= A x(t) - S_1 \psi_1 (t) - S_2 \psi_2 (t)
+    \end{split}
+  \end{align*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{LQ-Game}
+\begin{itemize}
+\item 证明(部分)
+
+整理下动态系统为
+$$
+\frac{d}{d t}\left[\begin{array}{c}
+x(t) \\
+\psi_{1}(t) \\
+\psi_{2}(t)
+\end{array}\right]=M\left[\begin{array}{c}
+x(t) \\
+\psi_{1}(t) \\
+\psi_{2}(t)
+\end{array}\right]
+$$
+满足$x(0)=x_0$和$\psi_i(T)-Q_{iT}(T)=0$.设$y(t)=[x^T(t), \psi^T_1(t), \psi^T_2(t) ]^T$,则对于每一个$x_0$,这个问题变为linear two-point boundary value问题
+$$
+\dot{y}(t) = M y(t), \qquad \text{with} \, P y(0) + Q y(T) = [x^T_0, 0, 0]^T
+$$.
+
+\item 整理-简化
+
+好比我们之前在单智能体中LQR中关于控制率做的那一套,首先假设$\psi_1 = P_1 x, \psi_2 = P_2 x$首先整理下现在的系统方程
+\begin{align*}
+  \begin{split}
+     P_1 \dot{x} & = (-Q_1 - A^T P_1 - \dot{P}_1 ) x \\
+     P_2 \dot{x} & = (-Q_2 - A^T P_2 - \dot{P}_2 ) x \\
+     \dot{x} & = (A  - B_1 R^{-1}_{11} B^T_1 P_1  - B_2 R^{-1}_{22} B^T_2 P_2 )x
+  \end{split}
+\end{align*}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{LQ-Game}
+\begin{itemize}
+\item 整理-简化
+
+得到Riccati 微分方程
+\begin{align*}
+  \begin{split}
+     \dot{P}_1 & =   P_1 B_1 R^{-1}_{11} B^T_1 P_1  + P_1 B_2 R^{-1}_{22} B^T_2 P_2  - Q_1 - A^T P_1 - P_1 A \\
+     & = P_1 S_1 P_1 + P_1 S_1 P_2 - Q_1 - A^T P_1 - P_1 A\\
+     \dot{P}_2 & = P_2 B_1 R^{-1}_{11} B^T_1 P_1  + P_2 B_2 R^{-1}_{22} B^T_2 P_2  - Q_2 - A^T P_2 - P_2 A \\
+     & = P_2 S_1 P_1 + P_2 S_1 P_2 - Q_2 - A^T P_2 - P_2 A
+  \end{split}
+\end{align*}
+如果再假设$P_i$是恒定的值,那么可得到耦合Riccati代数方程
+\begin{align*}
+  \begin{split}
+     0 & =  P_1 S_1 P_1 + P_1 S_1 P_2 - Q_1 - A^T P_1 - P_1 A\\
+     0 & = P_2 S_1 P_1 + P_2 S_1 P_2 - Q_2 - A^T P_2 - P_2 A
+  \end{split}
+\end{align*}
+我们设
+$$
+Q:=\left[\begin{array}{l}
+Q_{1} \\
+Q_{2}
+\end{array}\right] ; \quad A_{2}:=\left[\begin{array}{ll}
+A & 0 \\
+0 & A
+\end{array}\right] ; \quad A_{1}:=A ; \quad S:=\left[\begin{array}{ll}
+S_{1} & S_{2}
+\end{array}\right] \text { and } X:=\left[\begin{array}{l}
+P_{1} \\
+P_{2}
+\end{array}\right]
+$$
+那么上面的代数方程可以写成
+$$
+Q + A^T_2 X + X A_1 - XSX = 0.
+$$
 \end{itemize}
 \end{frame}
 
 \section{算法设计}
 \begin{frame}
+\frametitle{iLQR-Game}
 
-  如何保证得到有效的策略
+\begin{algorithm}[H]
+\caption{Iterative LQ Games}%算法名字
+\LinesNumbered %要求显示行号
+\KwIn{初始状态$x_0$,初始控制策略$\{ \pi^0 \}_{i \in N}$}%输入参数
+\KwOut{收敛的控制策略$\{ \pi^* \}_{i \in N}$}%输出
+% some description\; %\;用于换行
+\For{$k=1,2,\cdots$}{
+    通过控制策略$\pi^k$得到状态轨迹 $\xi^k$ \;
+    线性化轨迹得到 $A(t),B(t)$ \;
+    二次化性能函数得到 $l_i,Q_i, R_{ij} $ \;
+    求解LQ博弈得到下一步的控制策略 $\pi^{k+1}$ \; 
+　　only if\;
+　　\If{收敛}{
+　　　　返回  $\pi^{k+1}$ \;
+　　}
+    返回第一步 \;
+}
+
+\end{algorithm}
+
 \end{frame}
 
+
+\begin{frame}
+\frametitle{iLQR-Game}
+\begin{itemize}
+  \item 更新的步长,要保证性能一直在优化的话步长不可以太大
+  $$
+  (1-\alpha)(\text{cost})+\alpha(\| x_t - x^k \|^2 + \| u_t - u^k \|^2)
+  $$.
+  \item 而且这里不可以通过线搜索来找到最优步长,因为各个智能体之间的性能函数可能冲突.
+  \item 并没有任何理论保证可以从任意初始状态收敛.
+  \item 大多数情况下收敛到局部最优解.
+  \item 算法复杂度也不能保证,每一个LQ博弈的复杂度是$O(N^3 n^3)$,但是收敛需要的数量是不确定的(理论上).
+  \item 论文里说避障问题小于$50ms$.
+  \item 不能很好的保证约束得到满足.
+  \item 论文视频,伯克利的Hybrid Systems Lab \url{https://www.youtube.com/watch?v=KPEPk-QrkQ8&ab_channel=BerkeleyHybridSystemsLab}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{ALM-Game}
+  如何保证得到有效的策略
+\end{frame}
 
 
 
