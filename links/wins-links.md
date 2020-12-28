@@ -31,6 +31,7 @@
 - [Anca Dragan](https://people.eecs.berkeley.edu/~anca/index.html)
 - [Pieter Abbeel](https://people.eecs.berkeley.edu/~pabbeel/)
 - [Emma Brunskill](https://cs.stanford.edu/people/ebrun/)
+- [Zhuoran Yang  杨卓然](http://www.princeton.edu/~zy6/)
 - 
 
 ## YouTube
