@@ -15,10 +15,11 @@
 \usepackage[ruled]{algorithm2e}
 \usepackage{textpos}
 \usepackage{url}
+\usepackage{algorithmic}
 
 % \setmainfont{LMRomanUnsl10-Regular}
 % \setmainfont{Noto Sans Mono CJK JP}
-\setmainfont{黑体}
+% \setmainfont{黑体}
 
 % \useoutertheme{miniframes}
 \usetheme{Goettingen}
@@ -55,7 +56,7 @@
 %\caption{fig2}
 \end{minipage}%
 }%
-        
+
 %这个回车键很重要 \quad也可以
 \subfigure[从A到B,有动态障碍物的问题.]{
 \begin{minipage}[t]{0.5\linewidth}
@@ -765,7 +766,7 @@ $$
     通过控制策略$\pi^k$得到状态轨迹 $\xi^k$ \;
     线性化轨迹得到 $A(t),B(t)$ \;
     二次化性能函数得到 $l_i,Q_i, R_{ij} $ \;
-    求解LQ博弈得到下一步的控制策略 $\pi^{k+1}$ \; 
+    求解LQ博弈得到下一步的控制策略 $\pi^{k+1}$ \;
 　　only if\;
 　　\If{收敛}{
 　　　　返回  $\pi^{k+1}$ \;
@@ -796,14 +797,178 @@ $$
 \end{frame}
 
 \begin{frame}
-\frametitle{ALM-Game}
-  如何保证得到有效的策略
+\frametitle{ALM-Game:ALM 介绍和推导}
+  考虑一个线性约束的优化问题
+  $$
+  \min \, f(x) \quad s.t. \quad Ax=b
+  $$
+  KKT条件是
+  $$
+  \nabla f(x^*)=- A^T \lambda^*, \quad A x^* = b.
+  $$
+  定义拉格朗日函数为
+  $$
+  \mathcal{L}(x, \lambda) = f(x) + \lambda^T (Ax-b)
+  $$
+  那么KKT条件就是
+  $$
+  \nabla \mathcal{L}(x^*, \lambda^*) =
+  \begin{bmatrix}
+    \nabla_x \mathcal{L}(x^*, \lambda^*) \\
+    \nabla_{\lambda} \mathcal{L}(x^*, \lambda^*)
+  \end{bmatrix} = 0
+  $$
+  定义增广拉格朗日函数为
+  $$
+  \mathcal{L}(x,\lambda;\rho) = \underbrace{f(x)+ \lambda^T (Ax-b)}_{\text{Lagrangian}} + \underbrace{\frac{\rho}{2} \| Ax-b \|^2_2}_{\text{"augmentation"}}
+  $$
+  那么基本的ALM更新方法是
+  \begin{align*}
+    \begin{split}
+       x_k & = \mathop{\arg\min}_{x} \mathcal{L} (x, \lambda_{k-1}; \rho) \\
+       \lambda_k   & = \lambda_{k-1} + \rho (A x_k -b)
+    \end{split}
+  \end{align*}
 \end{frame}
 
-
-
-\section{理论支持}
 \begin{frame}
+\frametitle{ALM推导}
+原问题可以写成
+$$
+\min_x \max_{\lambda} f(x) + \lambda^T (Ax-b)
+$$
+这个问题是和原问题是等价的,但是求解$\max$非常不光滑,我们通过"proximal point"光滑它,同时惩罚这个$\lambda$偏离我们对他的先验$\bar{\lambda}$,那么
+$$
+\min_x \big \{
+\max_{\lambda} f(x) + \lambda^T (Ax-b) - \frac{1}{2 \rho} \| \lambda - \bar{\lambda} \|^2
+\big \}
+$$
+这样最大化$\lambda$就是极为简单的一件事情了
+$$
+\lambda = \bar{\lambda} + \rho (Ax-b)
+$$
+再把这个结果带回去得到
+$$
+\min_x f(x) + \bar{\lambda} (Ax-b) + \frac{\rho}{2}
+\| Ax -b \|^2 = \mathcal{L}(x, \bar{\lambda}; \rho)
+$$
+这样我们总结增广拉格朗日算法如下
+\begin{enumerate}
+  \item 最小化$\min_x \mathcal{L}(x, \bar{\lambda}; \rho)$得到新的$x$.
+  \item 通过新得到的$x$来更新$\lambda = \bar{\lambda}+ \rho(Ax-b)$.
+  \item 返回第一步直到收敛.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{ALM推导}
+把问题推广到线性不等式约束
+$$
+\min f(x) \quad s.t. \quad Ax \ge b.
+$$
+用相同的方法转化下
+$$
+\min_x \max_{\lambda \ge 0} f(x) - \lambda^T (Ax-b).
+$$
+在寻找最优$\lambda$需要一个分类操作
+$$
+\max (\bar{\lambda} + \rho (Ax-b), 0)
+$$
+最后,对于非线性约束$c(x)=0$或者$c(x) \ge 0 $可使用相同方法推导。
+\end{frame}
+
+\begin{frame}
+\frametitle{ALM-GAME问题描述}
+考虑如下系统
+$$
+x_{k+1} = f (x_k, u^1_k, \cdots, u^M_k ) = f( x_k, u_k )
+$$
+运动学约束为
+$$
+D(X,U^1,\cdots,U^M) = D(X,U) = 0
+$$
+还有一些约束是和其他玩家状态有关,我们表示这样的约束为
+$$
+C(X,U) \le 0
+$$
+对于每一个玩家,他做的事情可以写成这样
+\begin{align*}
+\begin{split}
+   \min_{X, U^v} \quad & J^v (X, U^v) \\
+    s.t. \qquad & D(X, U) = 0, \\
+    & C(X, U) \le 0.
+\end{split}
+\end{align*}
+我们把这样的约束问题写成ALM形式
+$$
+L^v(X,U) = J^v + {u^v}^T D + \lambda^T C + \frac{1}{2} C^T I_p C
+$$
+根据局部最优性可得
+$$
+\nabla_{X,U^v} L^v(X,U,u^v) = G^v(X,U,u^v)=0
+$$
+\end{frame}
+
+\begin{frame}
+\frametitle{ALM-GAME问题描述}
+我们把所有玩家的最优性方程都联立起来,就得到了这样的方程
+\begin{align*}
+\begin{split}
+   \min_{X, U^v} \quad & 0 \\
+    s.t. \qquad & G^v(X,U,u^v)=0, \quad \forall v \in \{ 1,\cdots,M \} \\
+    & D(X, U) = 0.
+\end{split}
+\end{align*}
+我们把所有梯度联立为一个变量$G(X,U,u) = [ (G^1)^T,\cdots,(G^M)^T,D^T ]^T$,其中$u=[ (u^1)^T,\cdots, (u^M)^T ]^T$ 这样我们对$G$做梯度即为
+$$
+H = \nabla_{X,U,u} G = \nabla_y G
+$$
+通过牛顿法来确定方向
+$$
+\delta y = - H^{-1} G
+$$
+然后步长就通过Backtracking line-search来确定.
+\end{frame}
+
+\begin{frame}
+\frametitle{ALM-GAME算法}
+\begin{algorithm}[H]
+\caption{ALGAMES solver}%算法名字
+\LinesNumbered %要求显示行号
+\KwIn{初始参数$\rho_0,\lambda, u^v,X^(0),U(0)$}%输入参数
+\KwOut{收敛的$y$}%输出
+% some description\; %\;用于换行
+\While{不收敛}{
+    $y \leftarrow$ NEWTON's METHOD$(y)$ \;
+    $\lambda \leftarrow$ DUALASCENT$(y,\lambda,\rho)$ \;
+    $\rho \leftarrow$ INCREASINGSCHEDUAL$(\rho)$ \;
+}
+
+返回 $y$ \;
+
+\end{algorithm}
+
+\begin{itemize}
+  \item 这里的$\lambda$更新规则是
+  $$
+  \lambda_k \leftarrow \left \{ 
+  \begin{array}{ll}
+    \max (0, \lambda_k + \rho_k C_k(C,U) ) & k \leq n_{ci}\\
+    \lambda_k + \rho_k C_k(X,U) & n_{ci} \leq k \leq n_{ci} + n_{ce}
+  \end{array} \right.
+  $$
+  \item $\rho$的更新规则是
+  $$
+  \rho_k \leftarrow  \gamma \rho_k
+  $$
+\end{itemize}
+
+\end{frame}
+
+\section{仿真实验}
+\begin{frame}
+
+
 
 \end{frame}
 \end{document}
