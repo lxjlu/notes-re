@@ -965,11 +965,104 @@ $$
 
 \end{frame}
 
+\begin{frame}
+\frametitle{Controllability of Nash Equilibrium in Game-Based Control Systems}
+系统建模
+$$
+\left\{\begin{aligned}
+\dot{x}(t) &=f\left(t, x(t), x_{1}(t), \ldots, x_{L}(t), u_{1}(t), \ldots, u_{L}(t), u(t)\right) \\
+\dot{x}_{i}(t) &=f_{i}\left(t, x(t), x_{1}(t), \ldots, x_{L}(t), u_{1}(t), \ldots, u_{L}(t), u(t)\right) \\
+x(0) &=x_{0}, x_{i}(0)=x_{i, 0}, i=1,2, \ldots, L, t \in[0, T]
+\end{aligned}\right.
+$$
+
+每个玩家的性能指标
+$$
+\begin{array}{l}
+J_{i}\left(u_{1}(\cdot), u_{2}(\cdot), \ldots, u_{L}(\cdot)\right) \\
+\quad=K_{i}\left(x^{F}(T)\right)+\int_{0}^{T} L_{i}\left(X(\cdot), u_{1}(\cdot), u_{2}(\cdot), \ldots, u_{L}(\cdot)\right) d t
+\end{array}
+$$
+开环纳什均衡
+$$
+\left\{\begin{aligned}
+\dot{x}^{*}(t) &=f\left(t, X^{*}(t), u_{1}^{*}(t), \ldots, u_{L}^{*}(t), u(t)\right) \\
+\dot{x}_{i}(t) &=f_{i}\left(t, X^{*}(t), u_{1}^{*}(t), \ldots, u_{L}^{*}(t), u(t)\right) \\
+x^{*}(0) &=x_{0}, x_{i}(0)=x_{i, 0}, i=1,2, \ldots, L
+\end{aligned}\right.
+$$
+\end{frame}
+
+\begin{frame}
+\frametitle{GBCS}
+\begin{definition}[可控性]
+If for any given
+initial states $x(0) = x_0 \in  \mathbb{R}^n$ , $x_i (0) = x_i(0) \in  \mathbb{R}^{n i} , i = 1, 2, \cdots , L$,
+and any terminal macro state $x(T) = x_T \in  \mathbb{R}^n$ , there is a strategy
+$u(t)(t \in [0, T ])$ of the regulator, under which the Nash equilibrium
+exists and is unique, and the solution $x^* (t)$ satisfies $x^*(T )
+= xT$ .
+\end{definition}
+考虑线性二次型系统
+$$
+\left\{\begin{aligned}
+\dot{x}(t)=& A(t) x(t)+\sum_{i=1}^{L} A_{i}(t) x_{i}(t)+\sum_{i=1}^{L} D_{i}(t) u_{i}(t) 
++B(t) u(t) \\
+\dot{x}_{i}(t)=& E_{i}(t) x(t)+\sum_{j=1}^{L} F_{i j}(t) x_{i}(t)+\sum_{j=1}^{L} B_{i j}(t) u_{j}(t) 
++B_{i}(t) u(t) \\
+x(0)=& x_{0}, x_{i}(0)=x_{i, 0}(i=1,2, \ldots, L)
+\end{aligned}\right.
+$$
+每个玩家性能指标
+$$
+\begin{array}{l}
+J_{i}\left(u_{1}(\cdot), u_{2}(\cdot), \ldots, u_{L}(\cdot)\right)=\frac{1}{2} x^{F}(T)^{T} Q_{i T} x^{F}(T) \\
+\quad+\frac{1}{2} \int_{0}^{T}\left[X^{T}(t) Q_{i}(t) X(t)+u_{i}^{T}(t) R_{i}(t) u_{i}(t)\right] d t
+\end{array}
+$$
+\end{frame}
+
+\begin{frame}
+\frametitle{GBCS}
+假设下面的Riccati微分方程有解$K_j$
+$$
+\left\{\begin{aligned}
+\dot{K}_{j}(t) &=-\widetilde{A}^{T} K_{j}-K_{j} \widetilde{A}-Q_{j}+K_{j} \widetilde{S}_{j} K_{j} \\
+K_{j}(T) &=\widetilde{Q}_{j T}
+\end{aligned}\right.
+$$
+定义转移矩阵$\Phi(t)$和可控的格拉姆矩阵$W$为
+$$
+\left\{\begin{aligned}
+\frac{d \Phi(t)}{d t} &=-\Phi(t) \bar{A}(t) \\
+\Phi(0) &=I_{(L+1) N}
+\end{aligned}\right.
+\qquad 
+W(T)=\int_{0}^{T} \Phi(t) \bar{B}(t) \bar{B}^{T}(t) \Phi^{T}(t) d t
+$$
+
+\begin{theorem}
+  GBCS系统可控仅当下面矩阵满秩的时候
+  $$
+  \left[\left[\begin{array}{c}
+    0_{N \times(L N)} \\
+    I_{N L}
+    \end{array}\right], \Phi(T) Q_{T}\left[\begin{array}{c}
+    0_{n \times(N-n)} \\
+    I_{N-n}
+    \end{array}\right], W(T)\right]
+  $$
+\end{theorem}
+\end{frame}
+
 \section{仿真实验}
 \begin{frame}
 
 
 
+\end{frame}
+
+\begin{frame}
 \end{frame}
 \end{document}
 %%% Local Variables:
