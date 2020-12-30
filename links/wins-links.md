@@ -44,6 +44,7 @@
 - [Data Driven Control using MATLAB Part 1 Stabilization and Optimal Control](https://www.youtube.com/watch?v=82wOgZJLX3M&ab_channel=AliNasir)
 - [Safe and Efficient Inverse Reinforcement Learning, PhD defense by Daniel S. Brown](https://www.youtube.com/watch?v=Ob_tcEzVyjU&ab_channel=DanielBrown)
 - [Russian – Chinese Educational Seminar: 5. Optimal Control](https://www.youtube.com/watch?v=noSAvyKCqhk&ab_channel=%D0%9E%D0%B2%D0%B0%D0%BD%D0%B5%D1%81%D0%9F%D0%B5%D1%82%D1%80%D0%BE%D1%81%D1%8F%D0%BD)
+- [徐亦达](https://www.youtube.com/channel/UConITmGn5PFr0hxTI2tWD4Q/playlists)
 - 
 
 ## Markdown 
@@ -200,6 +201,8 @@
 ### Labs
 
 - [天津大学深度强化学习实验室](http://www.icdai.org/)
+- [REx lab](http://roboticexplorationlab.org/)
+- 
 
 
 
