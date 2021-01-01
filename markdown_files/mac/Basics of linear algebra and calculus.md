@@ -4,7 +4,11 @@
 
 ### linear (in)dependence
 
-$ \{  v_1, v_2, \cdots, v_k    \}$ span $ \mathbb{R}^k $ if $ \forall w \in \mathbb{R}^k, \exits a_1, a_2, \cdots, a_k $
+$$
+\{  v_1, v_2, \cdots, v_k    \}\ span\  \mathbb{R}^k\ if \quad \forall w \in \mathbb{R}^k, \exists\ a_1, a_2, \cdots, a_k\ s.t.\ w= \sum_i a_i v_i.
+$$
+
+
 
 ### span
 
