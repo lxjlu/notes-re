@@ -4,6 +4,8 @@
 
 ### linear (in)dependence
 
+$ \{  v_1, v_2, \cdots, v_k    \}$ span $ \mathbb{R}^k $ if $ \forall w \in \mathbb{R}^k, \exits a_1, a_2, \cdots, a_k $
+
 ### span
 
 ### basis
