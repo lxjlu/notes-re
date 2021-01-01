@@ -2,15 +2,13 @@
 
 ## Linear Algebra Primer
 
-### linear (in)dependence
+### linear (in)dependence, span, basis
 
 $$
 \{  v_1, v_2, \cdots, v_k    \}\ span\  \mathbb{R}^k\ if \quad \forall w \in \mathbb{R}^k, \exists\ a_1, a_2, \cdots, a_k\ s.t.\ w= \sum_i a_i v_i.
 $$
 
-
-
-### span
+$v_1, \cdots,  v_k$ are linearly independent if there is no way to describe one of them as a linear combination of the others. In other words: if $a_1 v_1 + a_2 v_2 + \cdots + a_k v_k = $ the $ a_i =0, \forall i$.
 
 ### basis
 
