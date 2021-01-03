@@ -66,6 +66,7 @@
 - [2020 概率论与随机控制研讨会](https://www.bilibili.com/video/BV1X5411V72E?p=5)
 - [ECE 461/661: Controls Systems](http://www.bisonacademy.com/ECE461/Index.htm)
 - [ECE 463/663: Modern Control](http://www.bisonacademy.com/ECE463/Index.htm)
+- [控制课的notes](http://maecourses.ucsd.edu/~mdeolive/mae280a/lecture11.pdf)
 - 
 
 ### Optimization
@@ -234,6 +235,11 @@
 
 - [矩阵求导公式的数学推导](https://zhuanlan.zhihu.com/p/273729929)
 - [Matrix Calculus](http://www.matrixcalculus.org/)
+- 对称矩阵
+  - [很好的证明](http://maecourses.ucsd.edu/~mdeolive/mae280a/lecture11.pdf)
+  - [很好的定义](https://www.cs.ubc.ca/~nickhar/W12/NotesMatrices.pdf)
+  - [很好的总结](https://www.doc.ic.ac.uk/~ae/papers/lecture05.pdf)
+  - [非常简洁的总结](https://math.mit.edu/~cperezar/18.303/examples/symmetric_matrices.pdf)
 - 
 
 ### Differential Equations
