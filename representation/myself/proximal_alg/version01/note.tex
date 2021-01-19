@@ -1,0 +1,152 @@
+\documentclass[UTF8, aspectratio=169, 9pt]{ctexbeamer}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{color}
+\usepackage{multirow}
+\usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usepackage{subfigure}
+\usepackage{amsthm,amsfonts,mathtools}
+%\usepackage[noend]{algpseudocode}
+%\usepackage{algorithmicx,algorithm}
+\usepackage[ruled]{algorithm2e}
+\usepackage{textpos}
+\usepackage{url}
+\usepackage{algorithmic}
+
+\newtheorem{property}{性质}
+% \setmainfont{LMRomanUnsl10-Regular}
+% \setmainfont{Noto Sans Mono CJK JP}
+% \setmainfont{黑体}
+
+% \useoutertheme{miniframes}
+\usetheme{Goettingen}
+% \usetheme{Madrid}
+% \usetheme{Berkeley}
+\title{自用复习}
+\subtitle{近似点算法学习}
+\author{李鑫}
+\institute{吉林大学}
+\date{\today}
+\begin{document}
+\frame{\titlepage}
+\frame{\tableofcontents}
+
+\section{线性代数基础}
+
+\subsection{对称矩阵}
+\begin{frame}
+  \frametitle{对称矩阵定义及其性质}
+  \begin{definition}[对称矩阵]
+  矩阵$A \in \mathbb{R}^{n \times n}$ 是对称的: $ A^T = A $
+  \end{definition}
+  两个基本性质
+  
+  \begin{property}[实对称矩阵]
+    \begin{enumerate}
+    \item 实对称矩阵所有特征值为实数
+    \item 不同特征值的特征向量正交
+    \end{enumerate}
+  \end{property}
+
+  复习下复数的东西
+  \begin{itemize}
+  \item 先来看看什么叫做复数矩阵$A \in \mathbb{C}^{n \times n}$. 对于复数定义为$z = x
+  + y i$其中$ i = \sqrt {-1} $. 那么对应的$\mathbb{C}^n$就是每一个元素都是复数的
+  向量，而$\mathbb{C}^{ n \times n }$就是每一个元素都是复数的矩阵.
+  \item 我们记复数的共轭是$z^{*} = x - y i$. 对于复数向量$u \in \mathbb{C}^n$和
+    复数矩阵$A \in \mathbb{C}^{n \times n}$, 他们的共轭是他们每个元素的共轭.
+  \item $u \in \mathbb{C}^n $的共轭是$(u_i)^{*} = ( u^{*} )_i$.
+  \item $A \in \mathbb{C}^{n \times n}$的共轭是$(A_{ij})^{*} = (A^{*})_{ij}$.
+  \item 性质
+    \begin{itemize}
+    \item $u=v \Leftrightarrow u^{*} = v^{*}$.
+    \item $A,B \in \mathbb{C}^{n \times n}, \,  A=B  \Leftrightarrow  A^{*}
+      = B^{*} $.
+    \item $(Au)^{*} = A^{*} u^{*}$ 和$(A^{*})^{T} = (A^{T})^{*}$.
+    
+    \end{itemize}
+  \end{itemize}
+  
+  
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{对称矩阵定义及其性质}
+  \begin{proof}[实对称矩阵基本性质的证明]
+    \begin{enumerate}
+    \item 对于特征值$\lambda$和特征向量$u$，有
+      \begin{align}
+        \label{eq:01}
+        Au = \lambda u
+      \end{align}
+      对两边同时取共轭可得到
+      \begin{align}
+        \label{eq:02}
+        A^{*} u^{*} = \lambda^{*} u^{*} = A u^{*}
+      \end{align}
+      对公式 (\ref{eq:01}) 两边同时乘以$( u^{*} )^{T}$得到
+      \begin{align}
+        \begin{split}
+          \lambda (u^{*})^T u &=  ( u^{*} )^T (Au) = ( (u^{*})^T A ) u \\
+          &= ( A^T u^{*} )^T u \\
+          &= ( A u^{*} )^T u \\
+          &= ( \lambda^{*} u^{*} )^T u = \lambda^{*} ( u^{*} )^T u
+        \end{split}
+      \end{align}
+      得到$(\lambda - \lambda^{*} ) (u^{*})^T u = 0$，证明完毕.
+    \end{enumerate}
+  \end{proof}  
+\end{frame}
+
+\begin{frame}
+  \frametitle{对称矩阵定义及其性质}
+  \begin{proof}[实对称矩阵基本性质的证明]
+    \begin{enumerate}[2]
+    \item 对于不同特征值$\lambda \neq u$对于的特征向量$x \neq y$,有
+      \begin{align}
+        \begin{split}
+          <A x, y> &= \lambda <x, y>  \\
+          <A x, y> &= <x, A y> = u <x, y> \\
+          ( \lambda - u ) <x, y> &= 0
+        \end{split}
+      \end{align}
+      由于$ \lambda \neq u $得到$<x, y> = 0$.
+    \end{enumerate}
+  \end{proof}
+ \end{frame}
+
+
+\section{背景}
+\subsection{知乎笔记}
+\begin{frame}
+  \frametitle{基础知识}
+  集合$\mathcal{C}$是闭集，如果它包含边界，即
+  $$
+  x^k \in \mathcal{C}, \, x^k \rightarrow \bar{x} \quad \Rightarrow \quad \bar{x}
+  \in \mathcal{C}
+  $$
+  保持闭集的操作
+  \begin{itemize}
+  \item 闭集的交集还是闭集.
+  \item 有限个闭集的并集还是闭集.
+  \item 如果$\mathcal{C}$是闭集，则线性映射的原象也是闭集，也就是$\{ x|Ax \in
+    \mathcal{C} \}$是闭集合
+  \end{itemize}
+\end{frame}
+
+\thispagestyle{empty} 
+\begin{frame}{}
+  \centering \Huge
+  \emph{Thank You}
+\end{frame}
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-engine: xetex
+%%% End:
