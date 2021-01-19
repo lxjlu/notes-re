@@ -1,4 +1,0 @@
-\beamer@sectionintoc {1}{线性代数基础}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{对称矩阵}{3}{0}{1}
-\beamer@sectionintoc {2}{背景}{6}{0}{2}
-\beamer@subsectionintoc {2}{1}{知乎笔记}{6}{0}{2}
