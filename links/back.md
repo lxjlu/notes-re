@@ -98,4 +98,18 @@
 ## 2021-01-20
 
 - [KKT](https://www.bilibili.com/video/BV1Tt4y127U1)
+
+## 2021-01-21
+
+- [ELE 522: Large-Scale Optimization for Data Science Princeton University](http://www.princeton.edu/~yc5/ele522_optimization/lectures/dual_method.pdf)
+- [Second Symposium on Machine Learning and Dynamical Systems](http://www.fields.utoronto.ca/activities/20-21/dynamical)
+- [Convex Optimization: Fall 2019](http://www.stat.cmu.edu/~ryantibs/convexopt/)
+- [A Tutorial on Primal-Dual Algorithm](http://www.cs.toronto.edu/~slwang/primal-dual.pdf)
+- [Fenchel's duality theorem](https://en.wikipedia.org/wiki/Fenchel%27s_duality_theorem)
+- [Lagrangian relaxation](https://en.wikipedia.org/wiki/Lagrangian_relaxation)
+- [Optimizers' Garden](https://www.zhihu.com/column/c_168521441)
+- [Jiachen Li](https://jiachenli94.github.io/)
+- [多智能体交互系统中的动态关系推理](https://www.techbeat.net/talk-info?id=487)
+- [最优化：建模、算法与理论/最优化计算方法](http://bicmr.pku.edu.cn/~wenzw/optbook.html)
+- [拉格朗日乘子λ和x交替迭代，所求结果不理想](https://www.zhihu.com/question/397507727/answer/1257818446)
 - 
