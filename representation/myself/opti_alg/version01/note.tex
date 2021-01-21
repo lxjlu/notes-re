@@ -17,9 +17,14 @@
 \usepackage{algorithmic}
 
 \newtheorem{property}{性质}
+
 % \setmainfont{LMRomanUnsl10-Regular}
 % \setmainfont{Noto Sans Mono CJK JP}
 % \setmainfont{黑体}
+
+\setCJKmainfont{Microsoft YaHei}
+\setmainfont{Noto Mono}
+
 
 \begin{document}
 \title{优化算法的学习}
@@ -37,14 +42,159 @@
 
 \chapter{最优性的表示}
 
-\section{凸集的分离定理}
+\section{如何表示最优性}
 
-\section{Fakars引理}
+我的理解：从局部最优点到任意可行区域内的点，目标函数变得更差（最小化目标函数的就
+是变大）。那么如何刻画 \textsf{可行区域} 和 \textsf{目标函数变得更差}。
 
+首先是可行区域，就是控制变量在什么样子的集合里面。各种问题应该有各种奇奇怪怪的集
+合了，所以我们想通过一些数学定义，定义出一些性质比较好的集合（一次，二次）。
+
+最简单的集合应该是空集和一个元素的集合，但是在实际生活中都没什么意义。进一步就是
+线或者说是具有线性的集合，在一维里面就是过原点的线，二维里面是过原点的平面。但是
+这样的集合太大，比如整个二维平面，而我们只想里面的一部分，并且保持一定的线性。从
+这个想法出发，简单的把平面分成几份，每一份都是类似三角形无限伸长。我们把这样的东
+西称为锥，用数学的语言来描述就是
+\begin{align}
+ \alpha  ,    \beta \in C, \ a,  b \ge 0 \Rightarrow \  a \alpha + b \beta \in C
+\end{align}
+进一步的，我们很多东西都是有限的，不可能真的有无限伸长的东西，所以就要把这个集合
+封闭起来。如何封闭，这样封闭想保持什么样的性质，是需要我们事前想好的。
+
+那么脑袋里首先映入的就是把两个锥对着放一起，组成一个集合，菱形一样的玩意。但是是
+不是太特殊了，无法拓展使用。想要封闭，肯定要想到线段了，对应这线性。线段这个东西
+用数学的语言来描述就是
+\begin{align}
+1 \ge  \lambda \ge 0, a, b \in C  \Rightarrow b + \lambda ( a-b ) \in C  \Rightarrow \  \lambda a + ( 1-\lambda ) b \in C 
+\end{align}
+这样就会形成最为重要的概念，凸集。
+
+下面再来考虑使得目标函数变得更差这样的刻画方法。说白了，目标函数是函数，所以这里
+我们得讨论下目标函数的函数特性。因为是局部最优，即在一个小范围内的最优。看到局部，
+小范围什么的第一反应当然是泰勒展开，用线性项近似我们原来的函数（无论原来函数是什
+么样子），这样就一下子大大简化了范围。
+\begin{align}
+  f(x) = f( x_0 ) + \nabla f( x_0 )  <x, x_0  >
+\end{align}
+如果$x_0$是最小值，那么在局部，就
+\begin{align}
+  f(x) - f( x_0 ) = \nabla f( x_0 ) < x, x_0 > \  \ge 0
+\end{align}
+即任意可行区域内的点与最小点的方向，和最小点处的梯度，夹角小于$90^{ \circ }$。
+
+\section{凸集的基本性质}
+
+\subsection{数学分析的几个基本定理}
+映射：A的任何元素，都有唯一的B 中元素与之对应(\url{https://www.bilibili.com/video/BV1YA411s7tY})。
+
+\subsubsection{单调有界定理}
+
+\subsubsection{闭区间套定理}
+
+\subsubsection{Bolzano-Weierstrass Theorem}
+有界数列必有收敛子列
+
+\subsubsection{Cauchy收敛准则}
+
+
+\subsubsection{确界原理}
+
+ 
+\subsubsection{有限覆盖定理}
+
+
+\subsection{投影定理}
+我的理解：由于线性，就会天然存在三角不等式来保证唯一性。
+
+
+\subsection{点与凸集的分离}
+
+我的理解：一个点，一个凸集合一定可以找到一条线把这两个东西分开。
+
+
+
+\subsection{支撑超平面定理}
+
+我的理解：一根棒棒翘起来了凸集
+
+\section{Farkas引理}
+我的理解：一个点，要么在凸锥外面，要么在凸锥里面。
+
+
+
+
+设矩阵$A_{ m \times n} $和$n$维向量$c$，下面问题有且只有一个有解
+\begin{itemize}
+\item $A x \leq 0, \ c^T x > 0 $.
+\item $A^T y = c, y \ge 0$.
+\end{itemize}
+
+\section{凸函数}
+凸函数的定义域一定是凸集合，乍一看凭什么啊，怎么得到的啊，晕糊糊的。其实应该从凸
+函数的起源说起，为什么我们要搞这样的一个函数出来，因为我们想简单化问题。如何简单
+化呢，就是我得到一个局部极小点就是全局最小点。如何保证这样的性质呢，说起来也简单，
+联想我们初高中学过的如果一个函数的导数在图形上只有一个零点，那么最值就那一个。如
+何保证导数就一个零点呢，假设导数是单调的。如果是多维的，即梯度是单调函数
+\begin{align}
+  < \nabla f(x) - \nabla f(y), x - y > \ \ge 0
+\end{align}
+
+通过这个性质，我们可以得到函数与它一阶近似的关系
+\begin{align}
+  \begin{split}
+    \int_0^1 \frac{d}{dt} f( x + t ( y - x ) ) dt & = f( x + t ( y - x ) ) |_0^1 =
+    f(y) - f(x) \\
+    & = \int_0^1 { \nabla f( x + t ( y-x ) )  }^T ( y-x )    
+  \end{split}
+\end{align}
+从而得到
+\begin{align}
+  f(y) = f(x) + \int_0^1 { \nabla f( x + t ( y-x ) )  }^T ( y-x )
+\end{align}
+这里设$g(t) = { \nabla f( x + t ( y-x ) )  }^T ( y-x )$ 可以得到
+\begin{align}
+  \begin{split}
+    g(t) - g(0) & = { \nabla f( x + t ( y-x ) )  }^T ( y-x ) - { \nabla f( x )
+    }^T ( y-x ) \\
+    & = <{ \nabla f( x + t ( y-x ) )  }^T - \nabla { f( x )  }^T , y -x > \\
+    & = \frac{1}{t} <{ \nabla f( x + t ( y-x ) )  }^T - \nabla { f( x )  }^T ,
+    t(y -x) > \\
+    & \geq 0
+  \end{split}
+\end{align}
+这样$g(0)$是$g(t)$在$t \in [0, 1]$的最小值，可得
+\begin{align}
+  \begin{split}
+    f(y) & = f(x) + \int_0^1 { \nabla f( x + t ( y-x ) )  }^T ( y-x ) \\
+    & \geq f(x) + \int_0^1 { \nabla f(x) }^T ( y-x ) \\
+    & = f(x) + < \nabla f(x), y-x >
+  \end{split}
+\end{align}
+
+这就是我们常见的凸函数与其一阶近似的关系，再由这个关系，我们可以推导出书上直接给
+的定义，设$a = x + t ( y-x ) $
+\begin{align}
+  \begin{split}
+    & f(x) \geq f(a) + { \nabla f(a)  }^T ( x - a ) \\
+    & f(y) \geq f(a) + { \nabla f(a) }^T ( y - a)  \\
+    & ( 1-t ) f(x) \geq ( 1-t ) f(a) + ( 1-t ) { \nabla f(a)  }^T ( x - a ) \\
+    & t f(y) \geq t f(a) + t { \nabla f(a) }^T ( y - a)  
+  \end{split}
+\end{align}
+相加可得到我们“熟悉”的定义
+\begin{align}
+  ( 1-t ) f(x) + t f(y) \geq  f( x + t ( y-x ) ) = f( t y + ( 1-t ) x )
+\end{align}
+
+\section{无约束问题}
+
+\subsection{一阶算法复杂度}
+
+\subsection{二阶算法复杂度}
 
 
 \section{KKT条件}
-
+局部最优解的特征（\url{https://www.bilibili.com/video/BV1Tt4y127U1}）。
 
 
 
