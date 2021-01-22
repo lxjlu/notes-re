@@ -112,4 +112,15 @@
 - [多智能体交互系统中的动态关系推理](https://www.techbeat.net/talk-info?id=487)
 - [最优化：建模、算法与理论/最优化计算方法](http://bicmr.pku.edu.cn/~wenzw/optbook.html)
 - [拉格朗日乘子λ和x交替迭代，所求结果不理想](https://www.zhihu.com/question/397507727/answer/1257818446)
+
+## 2021-01-22
+
+- [Lieven Vandenberghe](http://www.seas.ucla.edu/~vandenbe/)
+- [印卧涛](https://www.math.ucla.edu/~wotaoyin/)
+- [Dr. Slim Belhaiza](https://www.youtube.com/channel/UCav3IjZnB22ucYsyBKCUvHg/videos)
+- [Advanced LAFF](https://www.youtube.com/channel/UC-FlL9LPEipGNgaa1pS7aPg/playlists)
+- [Nam Nguyen](https://www.youtube.com/channel/UCZaO1k-BRgRQkG3SDLslQwA)
+- [凸分析 看](https://sites.google.com/pdx.edu/convex-analysis-optimization)
+- [为什么要有紧集这个概念](https://www.zhihu.com/question/404442427)
+- [知乎搜索紧集](https://www.zhihu.com/search?type=content&q=%E7%B4%A7%E9%9B%86)
 - 
