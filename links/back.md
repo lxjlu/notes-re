@@ -123,4 +123,32 @@
 - [凸分析 看](https://sites.google.com/pdx.edu/convex-analysis-optimization)
 - [为什么要有紧集这个概念](https://www.zhihu.com/question/404442427)
 - [知乎搜索紧集](https://www.zhihu.com/search?type=content&q=%E7%B4%A7%E9%9B%86)
+
+## 2021-01-23
+
+- [Convex Separation](https://sites.google.com/pdx.edu/convex-analysis-optimization)
+- [RSS 2020, Spotlight Talk 7: A Smooth Representation of Belief over SO(3) for Deep Rotation Learn](https://www.youtube.com/watch?v=iEp6amPkkKw&ab_channel=RoboticsScienceandSystems)
+
+## 2021-01-24
+
+- [Distance Functions - Pt 1](https://www.youtube.com/watch?v=h7WYF_ye9d8&ab_channel=NamNguyen)
+- [Benjamin Recht: Optimization Perspectives on Learning to Control (ICML 2018 tutorial)](https://www.youtube.com/watch?v=nF2-39a29Pw&ab_channel=StevenVanVaerenbergh)
+- [Se Young Yun](https://www.youtube.com/user/list1343/videos)
+- [ Fenchel Conjugates](https://www.youtube.com/watch?v=7FWP8OlYAgQ&ab_channel=NamNguyen)
+
+## 2021-01-25
+
+- [Deep Learning on Graphs](http://cse.msu.edu/~mayao4/dlg_book/)
+- [Attacking the Off-Policy Problem With Duality](https://www.youtube.com/watch?v=eRXaQsDeC8U&t=6s&ab_channel=SimonsInstitute)
+- [Data-Efficient Hierarchical Reinforcement Learning](https://www.youtube.com/watch?v=VetQHnyiRrI&t=736s&ab_channel=SamuelYigzaw)
+- [CoinDICE: Off-Policy Confidence Interval Estimation via Dual Lens](https://www.youtube.com/watch?v=SxfU7hfxwP8&ab_channel=SimonsInstitute)
+- [Fenchel Conjugates part 6](https://sites.google.com/pdx.edu/convex-analysis-optimization)
+
+## 2021-01-26
+
+- [An Improved Exponential-Time Approximation Algorithm for Fully-Alternating Games Agains](https://www.youtube.com/watch?v=j5y5I_5FSgw&ab_channel=InstituteforAdvancedStudy)
+- [Stern_Yao](https://space.bilibili.com/487256478/channel/index)
+- [OpenReview: QPLEX: Duplex Dueling Multi-Agent Q-Learning](https://openreview.net/forum?id=Rcmk0xxIQV)
+- [YangQuan Chen](https://www.youtube.com/c/YangQuanChen/playlists)
 - 
+
