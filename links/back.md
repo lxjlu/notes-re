@@ -185,5 +185,13 @@
 - [Nadav Cohen - Analyzing Optimization and Generalization in DL via Dynamics of Gradient Descent](https://www.youtube.com/watch?v=ytTLSHs2fL4&ab_channel=Oneworldtheoreticalmachinelearning)
 - [Joydeep Dutta: A simple algorithm for simple bilevel programming](https://www.youtube.com/watch?v=zSBDoVv6M8Q&ab_channel=nonsmoothness)
 - [10.2 Fenchel Dual Part II](https://www.youtube.com/watch?v=-4ux8xo9QWw&list=PLXsmhnDvpjORzPelSDs0LSDrfJcqyLlZc&index=45&ab_channel=ConstantineCaramanis)
+
+## 2021-01-29
+
+- [Dual norm intuition](https://math.stackexchange.com/questions/903484/dual-norm-intuition)
+- [北大 泛函分析](https://www.bilibili.com/video/BV1SD4y1o7sP?t=1484)
+- [functional analysis E.Carneiro](https://www.youtube.com/watch?v=IyH9LgOw5s4&t=1339s&ab_channel=ICTPPostgraduateDiplomaProgramme)
+- [Claudio Landim functional analysis](http://w3.impa.br/~landim/lectures.html)
+- [The Bright side of Mathematics Functional analysis](https://www.youtube.com/watch?v=yDdxFBcvSGw&list=PLBh2i93oe2qsGKDOsuVVw-OCAfprrnGfr&ab_channel=TheBrightSideofMathematics)
 - 
 
