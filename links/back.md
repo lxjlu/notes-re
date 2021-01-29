@@ -150,5 +150,40 @@
 - [Stern_Yao](https://space.bilibili.com/487256478/channel/index)
 - [OpenReview: QPLEX: Duplex Dueling Multi-Agent Q-Learning](https://openreview.net/forum?id=Rcmk0xxIQV)
 - [YangQuan Chen](https://www.youtube.com/c/YangQuanChen/playlists)
+- [Steve Brunton](https://www.youtube.com/c/Eigensteve/playlists)
+- [杜少雷](http://simonshaoleidu.com/)
+- [Jason D. Lee](https://jasondlee88.github.io/)
+- [Offline Deep Reinforcement Learning Algorithms](https://www.youtube.com/watch?v=cjM5ArKvFMw&t=5s&ab_channel=SimonsInstitute)
+- [Chapter 5: Convex Numerical Algorithms](https://sites.google.com/pdx.edu/convex-analysis-optimization)
+- [中国运筹学会](https://space.bilibili.com/573936103/video)
+
+## 2021-01-27
+
+- [科研经验交流与常用工具分享](https://www.bilibili.com/video/BV1vV41187oq)
+- [Costa Huang](https://www.youtube.com/channel/UCDdC6BIFRI0jvcwuhi3aI6w)
+- [Lecturer - Yuriy Nesterov](https://www.youtube.com/watch?v=0gbp_9VQE54&list=PLEqoHzpnmTfAoUDqnmMly-KgyJ6ZM_axf&ab_channel=%D0%A4%D0%9A%D0%9D%D0%92%D0%A8%D0%AD)
+- [Dynamic Games Solver](https://roboticexplorationlab.org/projects/ALGAMES.html)
+- [Dr. Slim Belhaiza](https://www.youtube.com/channel/UCav3IjZnB22ucYsyBKCUvHg/videos)
+- [Fundamentals of Machine Learning over Networks](https://sites.google.com/view/mlons/course-materials)
+-  [semi smooth newton youtube](https://www.youtube.com/results?search_query=semi+smooth+newton)
+-  [Rong Ge (Duke) -- Optimization Landscape Symmetry, Saddle Points and Beyond](https://www.youtube.com/watch?v=UlchC5gS_Ug&ab_channel=FODSI)、
+-  [Lecture 14 - Deep Learning Foundations by Soheil Feizi : Min-Max Optimization ](https://www.youtube.com/watch?v=pka2F-RAuA4&t=1833s&ab_channel=SoheilFeizi)
+-  [Gradient Descent-Ascent Provably Converges to Strict Local Minmax Equilibria with a Finite Timescale](https://www.youtube.com/watch?v=od5GPk_ahQ4&ab_channel=SimonsInstitute)
+
+## 2021-01-28
+
+- [Control Meets Learning Seminar by Yisong Yue (Caltech) ](https://www.youtube.com/watch?v=QW0I10a2T54&ab_channel=ControlMeetsLearning)
+- [Andrea Montanari -Mean field methods in high-dimensional statistics and non-convex optimization-](https://www.youtube.com/watch?v=6a8zWbdzelU&ab_channel=OOPSOrganizers)
+- [Convergence and Dynamical Behavior of the ADAM Algorithm for Non Convex Stochastic Optimization](https://www.youtube.com/watch?v=lFP4SADU888&t=154s&ab_channel=FieldsInstitute)
+- [分布式计算、统计学习与ADMM算法](https://joegaotao.github.io/2014/02/11/admm-stat-compute/)
+- [Constantine Caramanis 10.2](https://www.youtube.com/watch?v=-4ux8xo9QWw&list=PLXsmhnDvpjORzPelSDs0LSDrfJcqyLlZc&index=45&ab_channel=ConstantineCaramanis)
+- [Harvard AM 205](https://www.youtube.com/watch?v=sQKi9FbJJtk&list=PL43IQ71lgJytIqhiJ6v5lNswFKeQ9952K&ab_channel=ChrisRycroft)
+- [Sham Kakade (U. of Washington) -- The provable effectiveness of policy gradient methods in RL](https://www.youtube.com/watch?v=pdwvKR4GsYQ&ab_channel=FODSI)
+- [在线优化、控制和学习的结合：鲁棒性和复杂度分析](https://www.techbeat.net/talk-info?id=490)
+- [Slides from lectures and Tutorials](https://wiki.mcs.anl.gov/leyffer/index.php/Slides_from_Lectures_and_Tutorials)
+- [SQP](https://www.math.uh.edu/~rohop/fall_06/Chapter4.pdf)
+- [Nadav Cohen - Analyzing Optimization and Generalization in DL via Dynamics of Gradient Descent](https://www.youtube.com/watch?v=ytTLSHs2fL4&ab_channel=Oneworldtheoreticalmachinelearning)
+- [Joydeep Dutta: A simple algorithm for simple bilevel programming](https://www.youtube.com/watch?v=zSBDoVv6M8Q&ab_channel=nonsmoothness)
+- [10.2 Fenchel Dual Part II](https://www.youtube.com/watch?v=-4ux8xo9QWw&list=PLXsmhnDvpjORzPelSDs0LSDrfJcqyLlZc&index=45&ab_channel=ConstantineCaramanis)
 - 
 
