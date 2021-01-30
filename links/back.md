@@ -193,5 +193,16 @@
 - [functional analysis E.Carneiro](https://www.youtube.com/watch?v=IyH9LgOw5s4&t=1339s&ab_channel=ICTPPostgraduateDiplomaProgramme)
 - [Claudio Landim functional analysis](http://w3.impa.br/~landim/lectures.html)
 - [The Bright side of Mathematics Functional analysis](https://www.youtube.com/watch?v=yDdxFBcvSGw&list=PLBh2i93oe2qsGKDOsuVVw-OCAfprrnGfr&ab_channel=TheBrightSideofMathematics)
+- [convex dual norm](https://www.stat.cmu.edu/~ryantibs/convexopt-S15/scribes/13-dual-corres-scribed.pdf)
+- [牛顿法code](https://www.youtube.com/watch?v=uzP5mMHqKI8&ab_channel=DALDAL)
+
+## 2021-01-30
+
+- [Ricardo Sanfelice: "Set-Based Hybrid Predictive Control for Collision Detection and Evasion in AVs"](https://www.youtube.com/watch?v=nJ5hj0K-IRY&t=54s&ab_channel=InstituteforPure%26AppliedMathematics%28IPAM%29)
+- [Stanford Seminar - Model Predictive Control of Hybrid Dynamical Systems](https://www.youtube.com/watch?v=XihAwlYdBuM&t=1101s&ab_channel=stanfordonline)
+- [Ricardo Sanfelice](https://hybrid.soe.ucsc.edu/home)
+- [Workshop II: Safe Operation of Connected and Autonomous Vehicle Fleets](https://www.ipam.ucla.edu/programs/workshops/workshop-ii-safe-operation-of-connected-and-autonomous-vehicle-fleets/)
+- [ECE 7850 Hybrid Systems: Theory and Applications (Spring 2017)](http://www2.ece.ohio-state.edu/~zhang/HybridSystemsClass/index.html)
+- [Satyen Kale (Google) -- Understanding adaptive methods for non-convex optimization](https://www.youtube.com/watch?v=Sx1nEX1THWU&t=238s&ab_channel=FODSI)
 - 
 
