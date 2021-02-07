@@ -204,5 +204,138 @@
 - [Workshop II: Safe Operation of Connected and Autonomous Vehicle Fleets](https://www.ipam.ucla.edu/programs/workshops/workshop-ii-safe-operation-of-connected-and-autonomous-vehicle-fleets/)
 - [ECE 7850 Hybrid Systems: Theory and Applications (Spring 2017)](http://www2.ece.ohio-state.edu/~zhang/HybridSystemsClass/index.html)
 - [Satyen Kale (Google) -- Understanding adaptive methods for non-convex optimization](https://www.youtube.com/watch?v=Sx1nEX1THWU&t=238s&ab_channel=FODSI)
+
+## 2021-01-31
+
+- [Alex Wang on Exactness in SDP relaxations of quadratically constrained quadratic programs](https://www.youtube.com/watch?v=q-M2uik3XTg&ab_channel=CMUTheory)
+- [Alex L. Wang](https://www.cs.cmu.edu/~alw1/)
+- [Francesco Borrelli: "Sample-Based Learning Model Predictive Control"](https://www.youtube.com/watch?v=ZFxmVDBYyDY&ab_channel=InstituteforPure%26AppliedMathematics%28IPAM%29)
+- [EE563 Convex Optimization](https://www.zubairkhalid.org/ee563_2020.html)
+- [Provable Nonconvex Methods/Algorithms](https://sunju.org/research/nonconvex/)
+- [为什么 Non-Convex Optimization 受到了越来越大的关注？](https://www.zhihu.com/question/61034915)
+- [SDP (半正定规划) 有什么形象的实例？怎么理解？](https://www.zhihu.com/question/51263551/answer/604280099)
+- [半光滑和光滑化牛顿法原理](https://zhuanlan.zhihu.com/p/38902833)
+- [Sergei S](https://www.youtube.com/channel/UCDifWwN2SldFsBFQnNLnWjw/videos)
+- [Fatma Kilinc-Karzan - Exactness in SDP Relaxations of Quadratically Constrained Quadratic Programs](https://www.youtube.com/watch?v=-RLspuhK6aU&ab_channel=PrincetonORFE)
+- [Lecture 7 | Quadratically Constrained Quadratic Programs | Convex Optimization by Dr. Ahmad Bazzi](https://www.youtube.com/watch?v=SP2-7AG2wfk&ab_channel=AhmadBazzi)
+- [Moment-Sum-Of-Squares based Semidefinite Programming for Chance Constrained Optimization](https://www.youtube.com/watch?v=cv3Yp1zRkyA&ab_channel=AshkanJasour)
+- [Introduction to Semidefinite Programming](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-251j-introduction-to-mathematical-programming-fall-2009/readings/MIT6_251JF09_SDP.pdf)
+- [Semidefinite Programming Relaxations and Algebraic Optimization in Control](https://www.mit.edu/~parrilo/ecc03_course/index.html)
+- [Pablo A. Parrilo](http://www.mit.edu/~parrilo/)
+
+## 2021-02-01
+
+- [Convex Optimization: Fall 2020](http://www.andrew.cmu.edu/user/yuanzhil/cov2.html)
+- [Praneeth Netrapalli](https://praneethnetrapalli.org/index.html)
+- [Lecture 1 - Topic in Optimization](https://www.youtube.com/watch?v=lOIX87ka9-Y&ab_channel=NPTEL-SpecialLectureSeries)
+- [Julia; VSCode; Optimization; Knapsack; JuMP; PlotlyJS | Tutorial 3/13 | Julia Analysis for Beginners](https://www.youtube.com/watch?v=WQQd67U5TpQ&ab_channel=juliafortalentedamateurs)
+- [9.520/6.860: Statistical Learning Theory and Applications, Fall 2017](http://www.mit.edu/~9.520/fall17/)
+- [Matthew Harris](https://www.youtube.com/channel/UCHmxhQ38A93_NP2WCDRhmfg)
+- [High-Dimensional Statistics and Probability](https://www.youtube.com/channel/UCDo2g5DETs2s-GKu9-jT_BQ)
+- [Optimization on Manifolds](https://www.youtube.com/user/melvinleok/playlists)
+- [Topology Manifolds and Differential Geometry](https://www.youtube.com/watch?v=RW5lJiKZHd8&list=PLxBAVPVHJPcrNrcEBKbqC_ykiVqfxZgNl&index=1&ab_channel=WHYBmaths)
+- [Ugo Rosolia](https://urosolia.github.io/)
+- [ABC-LMPC: Safe Sample-Based Learning MPC for Stochastic Nonlinear Dynamical Systems](https://www.youtube.com/watch?v=oPqbz77vvlo&ab_channel=BrijenThananjeyan)
+- [Workshop I: High Dimensional Hamilton-Jacobi Methods in Control and Differential Games](https://www.ipam.ucla.edu/programs/workshops/workshop-i-high-dimensional-hamilton-jacobi-methods-in-control-and-differential-games/)
+- [Qiqi Wang MIT](https://www.youtube.com/c/QiqiWangGG/playlists)
+- [Krylov子空间-知乎](https://www.zhihu.com/question/23309010/answer/73365393)
+- [GMRS Krylov 共轭梯度](https://www.youtube.com/watch?v=yD6PxzY7J3U&t=2s&ab_channel=%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E)
+- [Krylov子空间百度文档](https://wenku.baidu.com/view/27b438e926284b73f242336c1eb91a37f0113260.html)
+- [东北师范大学 矩阵计算-古典迭代法、Krylov子空间迭代](https://www.bilibili.com/video/BV1SZ4y1x7K2?from=search&seid=15383843821214374374)
+- [东北师范大学 矩阵计算-广义极小残量法 （GMRES）](https://www.bilibili.com/video/BV1Lk4y1R7yk/?spm_id_from=333.788.recommend_more_video.0)
+- [Lecture14: 2.1 Krylov Subspace and Arnoldi Iteration, Math405: Learning from Data](https://www.youtube.com/watch?v=w4pTZjQD4pg&t=343s&ab_channel=Dr.SlimBelhaiza)
+- [The Mathematical Foundations of Policy Gradient Methods (Sham Kakade) [Video 1]](https://www.youtube.com/watch?v=VRXRocjsR0E&t=12s&ab_channel=ColumbiaTRIPODSInstitute)
+- [大型矩阵特征值算法简介](https://www.zhihu.com/column/lanczos)
+- [Applied Linear Algebra & Numerical Analysis](https://faculty.washington.edu/kutz/am584/am584.html)
+- [Applied Linear Algebra GMRES](https://www.youtube.com/watch?v=pPoLsRkBha4&ab_channel=NathanKutz)
+
+## 2021-02-02
+
+- [Richard Murray: "Can We Really Use Machine Learning in Safety Critical Systems?"](https://www.youtube.com/watch?v=Wi8Y---ce28&ab_channel=InstituteforPure%26AppliedMathematics%28IPAM%29)
+- [線代啟示錄](https://ccjou.wordpress.com/tag/arnoldi-%E7%AE%97%E6%B3%95/)
+- [GMRES和循环Arnoldi算法是否相同？](https://www.zhihu.com/question/36746175)
+- [3 Arnoldi算法](https://zhuanlan.zhihu.com/p/89698434)
+- [矩阵与数值计算（2）——矩阵三角分解LU、PALU、Cholesky三角分解、QR分解](https://zhuanlan.zhihu.com/p/279323822)
+- [矩阵QR分解有三种方法](https://zhuanlan.zhihu.com/p/102376857)
+- [QR分解的三种实现方法（Gram schmidt等）各自有什么优势和劣势？](https://www.zhihu.com/question/23905796/answer/528875727)
+- [QR分解](https://zhuanlan.zhihu.com/p/112327923)
+- [Numerical Analysis 12.2.4 Upper Hessenberg Form](https://www.youtube.com/watch?v=t_bj3V9Ubac&ab_channel=PatrickJones)
+- [QR decomposition (for square matrices)](https://www.youtube.com/watch?v=FAnNBw7d0vg&ab_channel=TheBrightSideofMathematics)
+- [Applied Linear Algebra: QR Decomposition](https://www.youtube.com/watch?v=bUOmQOxVzvw&ab_channel=NathanKutz)
+- [Applied Linear Algebra: Computing Eigenvalues](https://www.youtube.com/watch?v=LYwzV1XQDCc&ab_channel=NathanKutz)
+- [Introduction to Proximal Policy Optimization Tutorial with OpenAI gym environment](https://www.youtube.com/watch?v=oOmcGQXJRXM&ab_channel=PythonLessons)
+- [Harvard Applied Math 205 Advanced Scientific Computing: Numerical Methods](https://courses.seas.harvard.edu/courses/am205/)
+- [Arnoldi iteration](https://www.cs.cmu.edu/afs/cs/academic/class/15859n-f16/Handouts/TrefethenBau/ArnoldiIteration-33.pdf)
+- [ Derivation of Arnoldi Iteration](http://www.math.iit.edu/~fass/477577_Chapter_14.pdf)
+- [EECS 275 Matrix Computation](https://faculty.ucmerced.edu/mhyang/course/eecs275/lectures/lecture18.pdf)
+- [Mathematical Methods for Engineers II](https://ocw.mit.edu/courses/mathematics/18-086-mathematical-methods-for-engineers-ii-spring-2006/syllabus/)
+
+## 2021-02-03
+
+- [[Meetup] Neural ODE & DiffEqFlux - 杜岳華](https://www.youtube.com/watch?v=vG3Osg7wSH0&ab_channel=AITech)
+- [[Meetup] Neural ODE & DiffEqFlux - 杜岳華 (without QA)](https://www.youtube.com/watch?v=hAA_AfVB89M&ab_channel=AITech)
+- [Hong Kong Machine Learning Season 3 Episode 4 - Learning and Differential Equations](https://www.youtube.com/watch?v=-HZ3yb3qLmo&ab_channel=HKMLResearchLimited)
+- [NeurIPS 2020 Tutorial: Deep Implicit Layers](https://www.youtube.com/watch?v=MX1RJELWONc&ab_channel=ZicoKolter)
+- [Lukasz Szpruch - Mean-Field Neural ODEs, Relaxed Control and Generalization Errors](https://www.youtube.com/watch?v=f9SUMJNeGEw&ab_channel=Oneworldtheoreticalmachinelearning)
+- [Neural Ordinary Differential Equations | SAiDL | Reading Session](https://www.youtube.com/watch?v=TIMxfbzSIbQ&ab_channel=SocietyforAIandDeepLearning)
+- [AN20: Partial Differential Equations Meet Deep Learning: Old Solutions for New Problems & Vice Versa](https://www.youtube.com/watch?v=-PBWA1VpT1E&ab_channel=SIAMConferences)
+- [Lagrangian Neural Networks | AISC](https://www.youtube.com/watch?v=27ravidF96g&ab_channel=MLExplained-AggregateIntellect-AI.SCIENCE)
+- [PDE-constrained optimization and the adjoint method](https://cs.stanford.edu/~ambrad/adjoint_tutorial.pdf)
+- [Neural Networks for Solving PDEs](https://www.youtube.com/watch?v=U38hnksTVdE&ab_channel=FieldsInstitute)
+- [Introduction to Scientific Machine Learning 2: Physics-Informed Neural Networks](https://www.youtube.com/watch?v=hKHl68Fdpq4&ab_channel=ParallelComputingandScientificMachineLearning)
+- [Application 4 - Solution of PDE/ODE using Neural Networks](https://www.youtube.com/watch?v=LQ33-GeD-4Y&ab_channel=NPTEL-NOCIITM)
+- [Neural ODEs Introduction](https://www.youtube.com/watch?v=uPd0B0WhH5w&ab_channel=AndriyD.)
+- [MDS20 Minitutorial: ODE/PDE Neural Networks by Eldad Haber](https://www.youtube.com/watch?v=jGCLyjv4bbk&ab_channel=SIAMConferences)
+- [08 Forward Backward Algorithm](https://www.youtube.com/watch?v=ujIbJp9uxRk&ab_channel=ChengSoonOng)
+
+## 2021-02-04
+
+- [What is Automatic Differentiation?](https://www.youtube.com/watch?v=wG_nF1awSSY&ab_channel=AriSeff)
+- [ ICERM](https://icerm.brown.edu/events/ht19-1-sml/)
+-  [Qiqi Wang Adjoint method nice!](https://www.youtube.com/watch?v=2WvYthVR5do&list=PLcqHTXprNMIMinq16VTi6cFeTxuEqlqHC&index=9&ab_channel=QiqiWang)
+- [One world theoretical machine learning](https://www.youtube.com/channel/UCz7WlgXs20CzugkfxhFCNFg)
+- [Approximating Governing Equations Using Data](https://icerm.brown.edu/materials/Slides/ht19-1-sml/Data_Driven_Governing_Equations_Approximation_Using_Deep_Neural_Networks_]_Dongbin_Xiu,_Ohio_State_University.pdf)
+- [Deep Neural Networks and Partial Differential Equations: Approximation Theory and Structural Properties](https://icerm.brown.edu/materials/Slides/ht19-1-sml/Deep_Neural_Networks_and_Partial_Differential_Equations_-_Approximation_Theory_and_Structural_Properties_]_Philipp_Petersen,_University_of_Oxford.pdf)
+- [[MS130] Qianxiao Li: A Dynamical Systems Approach to Deep Learning (SIAM MDS 20)](https://www.youtube.com/watch?v=R40wJN51NJA&ab_channel=LarsRuthotto)
+- [Karl Kunisch: "Solution Concepts for Optimal Feedback Control of Nonlinear PDEs"](https://www.youtube.com/watch?v=qCI16wG3yYU&t=131s&ab_channel=InstituteforPure%26AppliedMathematics%28IPAM%29)
+- [Samy Wu Fung](https://sites.google.com/site/samywufung/)
+- [Karl Kunisch](https://homepage.uni-graz.at/de/karl.kunisch/)
+- [[MS130] Samy Wu Fung:A Machine Learning Framework for High-Dimensional Mean Field Games(SIAM MDS 20)](https://www.youtube.com/watch?v=Z-GA61AZAO0&ab_channel=LarsRuthotto)
+
+## 2021-02-05
+
+- [Principle of optimality](http://liberzon.csl.illinois.edu/teaching/cvoc/node94.html)
+- [Qi Gong: "Nonlinear optimal feedback control - a model-based learning approach"](https://www.youtube.com/watch?v=oir34Klwweg&t=2691s&ab_channel=InstituteforPure%26AppliedMathematics%28IPAM%29)
+- [notes-mean-field](https://math.stanford.edu/~ryzhik/STANFORD/MEAN-FIELD-GAMES/notes-mean-field.pdf)
+- [Michael Herty: "Novel Control Concepts for Heterogenous Systems"](https://www.youtube.com/watch?v=CGYlEnh65og&ab_channel=InstituteforPure%26AppliedMathematics%28IPAM%29)
+- [An Introduction to mean field game theory 1/2](https://www.youtube.com/watch?v=8Ru25un4lTA&ab_channel=InstituteforMathematicalSciences)
+- [Math-小茄](https://space.bilibili.com/501135742?spm_id_from=333.788.b_765f7570696e666f.1)
+
+## 2021-02-06
+
+- [Haihao (Sean) Lu](http://web.mit.edu/haihao/www/index.html)
+- [An Introduction to mean field game theory 1/2](https://www.youtube.com/watch?v=8Ru25un4lTA&ab_channel=InstituteforMathematicalSciences)
+- [Yves Achdou: Numerical methods for mean field games](https://www.youtube.com/watch?v=a0GmO6YuNIk&t=56s&ab_channel=CentreInternationaldeRencontresMath%C3%A9matiques)
+- [Andrea Montanari -Mean field methods in high-dimensional statistics and non-convex optimization- 1/3](https://www.youtube.com/watch?v=6a8zWbdzelU&t=35s&ab_channel=OOPSOrganizers)
+- [AMA4004: Statistical Mechanics](http://gtribello.github.io/mathNET/AMA4004.html)
+- [Research in Options 2020 - Jean-Pierre Fouque - Reinforcement learning for mean field games and](https://www.youtube.com/watch?v=_K2QLVGsSlE&ab_channel=InstitutodeMatem%C3%A1ticaPuraeAplicada)
+- [Levon Nurbekyan: "Computational methods for mean-field games (Part 1/2)"](https://www.youtube.com/watch?v=Lkfrb8AoS18&ab_channel=InstituteforPure%26AppliedMathematics%28IPAM%29)
+- [Tembine Hamidou: "Mean-Field-Type Games"](https://www.youtube.com/watch?v=hP3y_59lT1o&ab_channel=InstituteforPure%26AppliedMathematics%28IPAM%29)
+- [Minyi Huang: "Mean field Stackelberg Games: State Feedback Equilibrium"](https://www.youtube.com/watch?v=CXTaXWigARs&ab_channel=InstituteforPure%26AppliedMathematics%28IPAM%29)
+- [Reinforcement Learning: An Introduction Code](https://waxworksmath.com/Authors/N_Z/Sutton/RLAI_1st_Edition/sutton.html)
+- [PyTorch Double Deep Q Network (DDQN) with CartPole (Thursday Coding Club)](https://www.youtube.com/watch?v=7eC-aV7D90U&ab_channel=MichaelAllen)
+- [Teach AI To Play Snake - Practical Reinforcement Learning Tutorial With PyTorch And Pygame (Part 1)](https://www.youtube.com/watch?v=PJl4iabBEz0&ab_channel=PythonEngineer)
+- [Machine Learning with Phil](https://www.youtube.com/c/MachineLearningwithPhil/videos)
+- [RARBG](https://proxyrarbg.org/torrents.php)
+- [Kevin Mooney python system coding](https://www.youtube.com/user/kpmooney/playlists)
+- [Math Hands-On with Python](https://www.youtube.com/channel/UCR58rfbkIPrCo0l6SMTITgw)
+- [python ODE](https://www.youtube.com/results?search_query=python+ode+&sp=CAI%253D)
+- [张崇洁](https://www.bilibili.com/video/BV195411a7Nf)
+- [The Modern Lab Notebook: Scientific computing with Jupyter and Python.](https://www.youtube.com/watch?v=xCKfR80E8ZA&ab_channel=QuentinStafford-Fraser)
+- [Beginning Scientific Computing](http://courses.washington.edu/am301/)
+- [Python-based scientific computing I](https://www.youtube.com/watch?v=2JIafdzwt74&ab_channel=ICTPCondensedMatterandStatisticalPhysics)
+
+## 2021-02-07
+
 - 
 
