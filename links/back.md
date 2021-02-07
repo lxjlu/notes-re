@@ -337,5 +337,7 @@
 
 ## 2021-02-07
 
+- [state-space model and python simulation nice!](https://www.youtube.com/watch?v=pI4rU9aol4c&ab_channel=AleksandarHaber)
+- [Aleksandar Haber](https://www.youtube.com/channel/UCJb75Ftt5VukFioxk5OocFQ)
 - 
 
