@@ -339,5 +339,33 @@
 
 - [state-space model and python simulation nice!](https://www.youtube.com/watch?v=pI4rU9aol4c&ab_channel=AleksandarHaber)
 - [Aleksandar Haber](https://www.youtube.com/channel/UCJb75Ftt5VukFioxk5OocFQ)
+- [APMonitor.com](https://www.youtube.com/c/APMonitorCom/videos)
+- [Python for Science and Engineering](https://www.halvorsen.blog/documents/programming/python/python.php)
+- [Scientific Python: Using SciPy for Optimization](https://realpython.com/python-scipy-cluster-optimize/)
+- [Optimization Next Steps](https://www.youtube.com/watch?v=Ej3-8-06WpE&ab_channel=BYUFLOWLab)
+- [Python for Control Engineering](https://www.youtube.com/watch?v=Hxx0k752LBA&ab_channel=IndustrialITandAutomation)
+- [Adaptive control - Lecture 5 / part 1 python](https://www.youtube.com/watch?v=1QneT8ljh48&ab_channel=AntonNikonov)
+- [Solve Differential Equations with ODEINT APMonitor](http://apmonitor.com/pdc/index.php/Main/SolveDifferentialEquations)
+
+## 2021-02-08
+
+- [Optimization in Python: Pyomo and Gurobipy Workshop - Brent Austgen - UT Austin INFORMS](https://www.youtube.com/watch?v=c59UmNub_9Y&t=1369s&ab_channel=RachelMoglen)
+- [Engineering Python 18A：使用SciPy进行优化](https://www.youtube.com/watch?v=ms3aKKW_iRc&ab_channel=YongWang)
+- [Optimization in Python](https://www.youtube.com/watch?v=HWNOV8u8-58&ab_channel=IndustrialITandAutomation)
+- [Mathematical Optimization in Python: Installation of Gurobi and Gurobipy](https://www.youtube.com/watch?v=fRKhao2bzsY&ab_channel=CodingPerspective)
+- [Gurobi 9.1 最新前沿科技助力性能提升](https://www.youtube.com/watch?v=0IRSOrAbT2M&ab_channel=GurobiOptimization)
+- [Gurobi Python Interface: Matrix-friendly Modeling Techniques](https://www.youtube.com/watch?v=zWPNHCWEOTE&ab_channel=GurobiOptimization)
+- [Amir-massoud Farahmand: Approximate Dynamic Programming and Batch Reinforcement Learning](https://www.youtube.com/watch?v=YK7m2Gy3Pbo&ab_channel=IPMAIGROUP)
+- [Multiagent Reinforcement Learning: Rollout and Policy Iteration](https://www.youtube.com/watch?v=eqbb6vVlN38&t=1654s&ab_channel=DimitriBertsekas)
+- [Dr. Ali Heydari  ADP Code ](http://faculty.smu.edu/aheydari/Research/SourceCodes/Index.html)
+- [Demo code for vehicle lateral tracking control](https://github.com/mahaitongdae/Approximate-dynamic-Programming)
+- [Deep Neural Network Approximated Dynamic Programming for Combinatorial Optimization](https://github.com/shenghexu/DNN-DP)
+
+## 2021-02-09
+
+- [清华大学强化学习与最优控制](http://www.idlab-tsinghua.com/thulab/labweb/publications.html?typeId=3&_types=)
+- [清华大学ADP](https://github.com/mahaitongdae/Approximate-dynamic-Programming)
 - 
+
+
 
