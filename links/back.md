@@ -365,7 +365,23 @@
 
 - [清华大学强化学习与最优控制](http://www.idlab-tsinghua.com/thulab/labweb/publications.html?typeId=3&_types=)
 - [清华大学ADP](https://github.com/mahaitongdae/Approximate-dynamic-Programming)
+
+## 2021-02-10
+
+- [南大NJU Box](https://box.nju.edu.cn/d/7f6a06e44dbb4b6a9a13/)
+- [大连理工 张立卫  经典凸分析与凸优化专题选讲](http://www.mathopt-course.com/)
+
+## 2021-02-14
+
+- [Bayesian Deep Learning and Probabilistic Model Construction - ICML 2020 Tutorial](https://www.youtube.com/watch?v=E1qhGw8QxqY&ab_channel=AndrewGordonWilson)
+
+## 2021-02-22
+
+- [OptimTraj](https://github.com/MatthewPeterKelly/OptimTraj)
+- [轨迹优化01](https://zhuanlan.zhihu.com/p/340191178)
+- [泛函分析与最优化理论](https://zhuanlan.zhihu.com/p/351670843)
+- [Trajectory Optimization - Learning the Theory](http://www.matthewpeterkelly.com/tutorials/trajectoryOptimization/index.html)
+- [Orthogonal Collocation on Finite Elements](https://apmonitor.com/do/index.php/Main/OrthogonalCollocation)
+- [chebfun](http://www.chebfun.org/)
 - 
-
-
 
