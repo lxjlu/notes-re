@@ -383,5 +383,48 @@
 - [Trajectory Optimization - Learning the Theory](http://www.matthewpeterkelly.com/tutorials/trajectoryOptimization/index.html)
 - [Orthogonal Collocation on Finite Elements](https://apmonitor.com/do/index.php/Main/OrthogonalCollocation)
 - [chebfun](http://www.chebfun.org/)
+- [Tutorial: Single Shooting Trajectory Optimization with Matlab](http://sam.pfrommer.us/tutorial-single-shooting-trajectory-optimization-with-matlab)
+
+## 2021-02-23
+
+- [搭建 Julia 轻量级编写环境（VSCode，JupyterLab）](https://zhuanlan.zhihu.com/p/158912631)
+- [Cooperative_Parking_Trajectory_Planning](https://github.com/libai2020/Cooperative_Parking_Trajectory_Planning)
+
+## 2021-02-24
+
+- [Julia Course 2019](http://www.control.lth.se/education/doctorate-program/julia-course/julia-course-2019/)
+- [Modern computing for process optimization with Julia](https://www.youtube.com/playlist?list=PL0mUzHBEguI_82wLlvX6SjoWNDIpUVab8)
+- [Tutorial Series Julia for  Beginners](https://www.youtube.com/playlist?list=PLhQ2JMBcfAsi_3g2AFJ6B84d8c5jw5kXp)
+- [julia for talented amateurs](https://www.youtube.com/c/juliafortalentedamateurs/playlists)
+- [Julia Programming for Operations Research](https://www.softcover.io/read/7b8eb7d0/juliabook)
+- [Introduction to Optimization](https://laurentlessard.com/teaching/524-intro-to-optimization/)
+- [Teaching an optimization course in Julia](https://www.reddit.com/r/Julia/comments/hzxav9/teaching_an_optimization_course_in_julia/)
+- [Basic Optimization Usage Julia](https://www.youtube.com/watch?v=qf6VwbMAEZY&ab_channel=BYUFLOWLab)
+- [Abel Siqueira](https://www.youtube.com/channel/UCrHWmb1a2JW50QovKgkcKCQ)
+
+## 2021-02-25
+
+- [Mykel Kochenderfer Stanford](https://mykel.kochenderfer.com/textbooks/)
+- [Julia Diff](https://juliadiff.org/)
+- [[Workshop] Efficient Scientific Computing with Julia](https://www.youtube.com/playlist?list=PLRN3NhKJXVhnT1oPSfxGQipMhWBN5IqA8)
+- [optimization course 2020](https://github.com/jomorlier/OptimizationCourse)
+
+## 2021-02-26
+
+- [Standford ENGR108: Introduction to Matrix Methods](https://web.stanford.edu/class/engr108/index.html)
+- [RL min course](https://www.youtube.com/playlist?list=PLMsTLcO6ettgmyLVrcPvFLYi2Rs-R4JOE)
+- [MTH-FA Functional Analysis](https://www.youtube.com/playlist?list=PLp0hSY2uBeP-MGleT2B1vWjXEa_APRc2z)
+- [Introduction to Computational Thinking](https://computationalthinking.mit.edu/Spring21/)
+- [Stanford ENGR108: Introduction to Matrix Methods | 2020 | Lecture 12 - VMLS angle](https://www.youtube.com/watch?v=4shS22XxZYw&ab_channel=stanfordonline)
+
+## 2021-02-27
+
+- [JuliaCon 2016 | Intermediate Level Julia (Workshop) | David Sanders](https://www.youtube.com/watch?v=rAxzR7lMGDM&ab_channel=TheJuliaProgrammingLanguage)
+- [Introduction to Computational Thinking Fall 2020](https://computationalthinking.mit.edu/Fall20/)
+- [nice work](https://mynerva.io/courses/kgvOw2OSEw)
+- [Basic Optimization Usage (Julia)](https://www.youtube.com/watch?v=qf6VwbMAEZY&t=306s&ab_channel=BYUFLOWLab)
+
+## 2021-02-28
+
 - 
 
