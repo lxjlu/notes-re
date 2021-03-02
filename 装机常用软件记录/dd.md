@@ -37,6 +37,10 @@
 - visual studio
 - 搜狗输入法
 - 迅雷下载
+- Rufus
+- 大白菜
+- chrome-avgle
+- cmder
 - 
 
 ### 代码计算
