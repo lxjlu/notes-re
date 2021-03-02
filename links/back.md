@@ -426,5 +426,24 @@
 
 ## 2021-02-28
 
+-  [nice optim work](https://www.youtube.com/c/BYUFLOWLab/videos)
+
+## 2021-03-01
+
+- [[vscode配置]在vscode中编辑matlab脚本](https://www.bilibili.com/video/BV1U54y1X7Eq?t=9)
+- [Optimization Techniques in Engineering](https://flow.byu.edu/me575/resources/)
+- [寻根 牛顿 Jacobi](https://www.youtube.com/watch?v=QnIn7es809g&ab_channel=BYUFLOWLab)
+- [姜院主页](https://yijiang1992.github.io/publications.html)
+- [sparse  optimization](https://www.youtube.com/results?search_query=sparse++optimization)
+- [Bayesian Deep Learning](https://www.youtube.com/channel/UCfio7-jOdosMCLnxiZ9q-zA)
+- [Keras with TensorFlow Course - Python Deep Learning and Neural Networks for Beginners Tutorial](https://www.youtube.com/watch?v=qFJeN9V1ZsI&ab_channel=freeCodeCamp.org)
+
+## 2021-03-02
+
+- [优化方法·约束非线性优化](https://zhuanlan.zhihu.com/p/258762446)
+- [牛顿法 求根](https://zhuanlan.zhihu.com/p/136823356)
+- [SQP C++](https://zhuanlan.zhihu.com/p/348666680)
+- [matlab 非线性优化](https://ww2.mathworks.cn/help/optim/ug/constrained-nonlinear-optimization-algorithms.html#bsgppl4)
+- [Algorithms for Unconstrained Optimization: Trust Region vs Line Search](https://www.youtube.com/watch?v=DQZ-ASNrXTM&ab_channel=SergiyButenko)
 - 
 
