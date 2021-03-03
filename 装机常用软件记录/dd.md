@@ -52,6 +52,17 @@
   - [vscode 配置matlab](https://www.bilibili.com/video/BV1U54y1X7Eq?t=9)
   - [vscode配置python](https://www.youtube.com/watch?v=tS4beaq9ies&t=799s&ab_channel=%E6%B2%88%E5%BC%98%E5%93%B2)
   - [vscode配置julia](https://www.youtube.com/watch?v=7M8e2Q5BirA&t=1141s&ab_channel=juliafortalentedamateurs)
+    - Text Edit
+      - Match Brackets: never
+      - Parameter Hints: uncheck box (un)
+      - Rules: 80 
+      - Font: 15
+      - Minimap Max Colum: 80
+      - Suggestion Accept Suggestions : off
+    - Application 
+      - Telemetry: uncheck enable
+    - Keybindings
+      - julia execute 
 - Typora
 - Atom
 - emacs
