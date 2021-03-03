@@ -445,5 +445,9 @@
 - [SQP C++](https://zhuanlan.zhihu.com/p/348666680)
 - [matlab 非线性优化](https://ww2.mathworks.cn/help/optim/ug/constrained-nonlinear-optimization-algorithms.html#bsgppl4)
 - [Algorithms for Unconstrained Optimization: Trust Region vs Line Search](https://www.youtube.com/watch?v=DQZ-ASNrXTM&ab_channel=SergiyButenko)
-- 
+
+## 2021-03-03
+
+- [Opti Methods for ML and Engineering](https://www.youtube.com/playlist?list=PLdkTDauaUnQpzuOCZyUUZc0lxf4-PXNR5)
+- [凸优化](https://www.zhihu.com/column/convex)
 
