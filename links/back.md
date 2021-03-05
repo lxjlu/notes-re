@@ -451,3 +451,15 @@
 - [Opti Methods for ML and Engineering](https://www.youtube.com/playlist?list=PLdkTDauaUnQpzuOCZyUUZc0lxf4-PXNR5)
 - [凸优化](https://www.zhihu.com/column/convex)
 
+## 2021-03-04
+
+- [vscode配置latex](https://zhuanlan.zhihu.com/p/166523064)
+- [Optimization Algorithms](https://www.youtube.com/playlist?list=PLXsmhnDvpjORzPelSDs0LSDrfJcqyLlZc)
+- [经典凸分析选讲](http://www.mathopt-course.com/Product.asp?BigClassName=%C7%D0%D7%B6%D3%EB%B7%A8%D7%B6)
+- [求解稀疏优化问题1——增广拉格朗日方法+半光滑牛顿方法](https://zhuanlan.zhihu.com/p/92230537)
+
+## 2021-03-05
+
+- [3.3 smooth and strongly convex](https://www.youtube.com/watch?v=BQyHULGB4fY&list=PLXsmhnDvpjORzPelSDs0LSDrfJcqyLlZc&index=13)
+- 
+
