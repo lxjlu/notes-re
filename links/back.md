@@ -461,5 +461,17 @@
 ## 2021-03-05
 
 - [3.3 smooth and strongly convex](https://www.youtube.com/watch?v=BQyHULGB4fY&list=PLXsmhnDvpjORzPelSDs0LSDrfJcqyLlZc&index=13)
-- 
+
+## 2021-03-06
+
+- [4.2](https://www.youtube.com/watch?v=D1TseaVu9Nc&list=PLXsmhnDvpjORzPelSDs0LSDrfJcqyLlZc&index=17)
+- [Nelder Mead](https://www.youtube.com/watch?v=-GWze-wtu60)
+- [5.1](https://www.youtube.com/watch?v=zWgzHQR8dh4&list=PLXsmhnDvpjORzPelSDs0LSDrfJcqyLlZc&index=20)
+- [8个高清二次元&动漫壁纸网站推荐](https://zhuanlan.zhihu.com/p/80975528)
+
+## 2021-03-07
+
+- [Control PDE](https://www.youtube.com/channel/UC33xMR29w3JPbwghO6-RwDw/videos)
+- [Non convex](https://www.youtube.com/results?search_query=non+convex+optimization)
+- [5.12](https://www.youtube.com/watch?v=tIywqa-OgoI&list=PLXsmhnDvpjORzPelSDs0LSDrfJcqyLlZc&index=29)
 
