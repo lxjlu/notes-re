@@ -913,6 +913,132 @@ f(x) + f^* (y) \ge y^T x, \quad \forall x, y \\
 f(x) + f^* (y) = f(x) + \sup_{z \in \text{dom} \ f} \{ y^T z - f(z)   \} \\
 \ge f(x) + y^T x - f(x)  = y^T x 
 $$
+### Examples
+$$
+f(x) = \frac{1}{2} x^T Q x + q^T x + c \\ 
+f^* (y) = \sup_x \{ y^T - \frac{1}{2} x^T Q x - q^T x - c \} \\
+\Rightarrow \text{Find opt } x: y - Q x - q = 0  \rightarrow x = Q^{-1 } (y-q) \\
+\Rightarrow f^* (y)  = \frac{1}{2} (y-q)^T Q^{-1}  (y-q) \\
+\text{Note: } \nabla f^* (y) = Q^{-1} (y-q) = \nabla f^{-1} (y)
+$$
+
+Exescise: What if $Q$ is not strictly p.d. ?
+
+More Examples
+
+primal | conjungate |
+---------|----------|
+ $\sum x_i \log x_i$ | $\sum e^{y_i -1}$ | 
+ $- \sum  \log x_i$ | $- \sum  \log (-y_i) - y_i $ | 
+ $- \log \det X $  | $- \log \det(-Y) - n $  | 
+ $I_{\mathscr{X}}(x)$ | |
+
+Def'n (Support function):
+$$
+S_{\mathscr{X}} (y) = \sup: y^T x \\
+s.t. \quad x \in \mathscr{X}
+$$
+
+$B_{\| \cdot \|}$ = unit ball of a norm $\| \cdot \| = \{ x: \|x\| \le 1$. Let $f(x) = \|x \|$, then 
+$$
+f^* (y) = \sup_x \{ y^T x - \| x \| \} = I_{B_{\| \cdot \|^*}}
+$$
+Recall
+$$
+\| y \|^* = \sup : x^T y \\
+s.t. \quad \| x \| \le 1 \\
+\Rightarrow \text{if } \| y \|^* \le 1 \rightarrow y^T x \le \| x \| \rightarrow f^*(y) = 0 \\
+\text{if } \| y \|^* > 1 \rightarrow \exists x \quad \text{with } \|x\| \le 1, x^T y > 1, \text{by scaling } f^*(y) = + \infty
+$$
+### Calculus Rules
+- 
+  $$
+  F(x_1, x_2) = f_1 (x_1) + f_2 (x_2) \Rightarrow F^*(y_1, y_2) = f_1^* (y_1) + f_2^* (y_2)
+  $$
+- 
+  $$
+  (af(x))^* = a f^* ( y / a )
+  $$
+- 
+  $$
+  (af(x/a))^* = a f^* ( y )
+  $$
+- 
+  $$
+  ( f(x) + a^T x + b)^* = f^*(y-a) - b
+  $$
+- 
+  $$
+  ( f(x-b))^* = b^T y + f^*(y)
+  $$
+- 
+  $$
+  ( f(Ax) )^* = f^* (A^{-T} y)
+  $$
+- Infimal Convolution: Given $g(x), h(x)$,
+  $$
+  f(x) = \inf_{u+v=x} : (g(u) + h(v)) \\
+  f^* (y) = g^* (y) + h^* (y)
+  $$
+
+### The Epigraph 
+$$
+f: \mathbb{R}^n \rightarrow \mathbb{R}, \text{epi}(f) = \{ (x,z):z \ge f(x)  \} \\
+$$
+Note: epi(f) is convex iff f is convex.
+Note: level sets of f are horizontal slices of the epi(f).
+
+### The Conjugate is Closed and Convex
+Recall: a set $C \subset \mathbb{R}^n$ is closed if it contains all of its limit points. That is: $\{x_n\}  \subset C, x_n \rightarrow x \Rightarrow x \in C $.
+Def'b: A function $f:\mathbb{R}^n \rightarrow \mathbb{R}$ is called closed if epi(f) $\subset \mathbb{R}^{n+1}$ is closed.
+Proof:
+Convexity: $f^* (y)$ is sup. of affine fns hence convex.
+Closed Note: $g(x) = \max \{ g_1(x), g_2(x) \} \Rightarrow \text{epi}(g) = \text{epi}(g_1) \cap \text{epi}(g_2)$. Hence $f^*$  is closed.
+
+### Conjugate of the Conjugate
+$$
+f:\mathbb{R}^n \rightarrow \mathbb{R}, f^*(y) = \sup_x \{ y^T x - f(x) \}, f^{**}(x) = \sup_y \{ x^T y - f^*(y) \}
+$$
+Check: $ \text{epi}(f^{**}) \supseteq \text{epi}(f) $
+![conjugate of conjugate epi](/assets/conjugate%20of%20conjugate%20epi.png)
+
+If f is closed and convex, then $f^{**} = f$. We will show: epi($f^{**}$) = epi($f$).
+We will do this by contradiction:
+Suppose $\exists \hat{x}$ with $(\hat{x}, f^{**}( \hat{x} ) ) \notin \text{epi}(f)$
+![conjugate of conjugate proof 01](/assets/conjugate%20of%20conjugate%20proof%2001.png)
+![conjugate of conjugate proof 02](/assets/conjugate%20of%20conjugate%20proof%2002.png)
+![conjugate of conjugate proof 03](/assets/conjugate%20of%20conjugate%20proof%2003.png)
+
+### The "inverse" sub-differential
+Suppose f is closed and convex, then
+$$
+\partial f , \partial f^* \ \text{are inverses}. \\
+i.e., \quad y \in \partial f(x) \Leftrightarrow x \in \partial f^* (y) \Leftrightarrow x^T y = f(x) + f^* (y) 
+$$
+
+Proof:
+$$
+f^* ( \hat(y) ) = \sup_x \{  \hat{y}^T x - f(x) \} \\
+\hat{x} \ \text{opt iff } 0 \in \hat{y} - \partial f(\hat{x}) \\
+\Rightarrow \hat{y} \in \partial f ( \hat{x} ) \rightarrow f^*( \hat{y} ) = \hat{y}^T - f(\hat{x}) \\
+f^* ( y ) = \sup_x \{  y^T x - f(x) \} \ge y^T \hat{x} - f(\hat{x}) \\
+= (y-\hat{y})^T \hat{x} - f( \hat{x} ) + \hat{y}^T \hat{x} = f^*(y) + (y-\hat{y})^T \hat{x} \\
+= f^*(y) +  \hat{x}^T (y-\hat{y})  \\
+\Rightarrow  f^* ( y ) \ge  f^*(y) +  \hat{x}^T (y-\hat{y}) \\
+\Rightarrow \hat{x} \in \partial f^* (\hat{y})
+$$
+f is closed and convex $f^{**} = f $. Then....
+
+### Dual of a strongly convex function
+![dual of sc fn](/assets/dual%20of%20sc%20fn.png)
+
+### Dual of a smooth convex function
+
+
+### Moreau Decomposition
+
+
+
 ## Dual Decompositon Algorithms
 Proximal Point Algorithm, Prox Grad in the Dual, Augmented Lagrangian Method
 ## Monotone Operators, Contractive Operators
