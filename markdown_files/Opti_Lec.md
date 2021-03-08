@@ -878,12 +878,41 @@ $$
 y_t \in \argmin: \nabla f(x_t)^T y \quad s.t. \quad y \in \mathscr{X} \\
 x_{t+1} = (1-\gamma_t) x_t + \gamma_t \cdot y_t
 $$
+![FW](/assets/FW.png)
 
 ## Stochastic methods.
 SVRG
 ## Newton and Quasi-Newton Methods
 ## Interior Point Methods
+## 共轭函数
 ## Legendre-Fenchel Duality
+operator splitting and duality
+Settings:
+- $f: \mathbb{R}^n \rightarrow \mathbb{R}$, convex
+- $\nabla f: \mathbb{R}^n \rightarrow \mathbb{R}^n$, monotone
+- $\partial f$: set-valued mapping, monotone 
+One reason that it's useful to start thinking about these as operators  is that we can rephrase a lot of things we've have done in terms of mapping.
+
+Ex: $T: \mathbb{R}^n \rightarrow \mathbb{R}^n, T= (I + \lambda \nabla f) $. Gradient descent: $x \longmapsto Tx$.
+Q: What about the inverse?
+### Inverse of the gradient 
+$\nabla f: \mathbb{R}^n \rightarrow \mathbb{R}^n$. For $f$ a strongly convex quadratic: $f(x) = \frac{1}{2} x^T Q x + q^T x + c, \nabla f (x) = Q x + q $. We can compute the inverse mapping:
+$$
+\nabla f^{-1} (y) = Q^{-1} (y-q)
+$$
+More generally??
+  
+### Fenchel Congugatge
+$f: \mathbb{R}^n \rightarrow \mathbb{R}$. Then
+$$
+f^* (y) = \sup_{x \in \text{dom} \ f} \{ y^T x - f(x)   \}
+$$
+### Fenchel's Inequality
+$$
+f(x) + f^* (y) \ge y^T x, \quad \forall x, y \\
+f(x) + f^* (y) = f(x) + \sup_{z \in \text{dom} \ f} \{ y^T z - f(z)   \} \\
+\ge f(x) + y^T x - f(x)  = y^T x 
+$$
 ## Dual Decompositon Algorithms
 Proximal Point Algorithm, Prox Grad in the Dual, Augmented Lagrangian Method
 ## Monotone Operators, Contractive Operators

@@ -475,3 +475,13 @@
 - [Non convex](https://www.youtube.com/results?search_query=non+convex+optimization)
 - [5.12](https://www.youtube.com/watch?v=tIywqa-OgoI&list=PLXsmhnDvpjORzPelSDs0LSDrfJcqyLlZc&index=29)
 
+## 2021-03-08
+
+- [Legendre变变变](https://mp.weixin.qq.com/s?__biz=MzIzMjU1NTg3Ng==&mid=2247484790&idx=1&sn=e0cd2e9ac1057e4d83437ab77a251dd7&chksm=e892517ddfe5d86b456136599766d39d9ed66a7c6884e897552a44b9cbe73407b1a46082909e&scene=21#wechat_redirect)
+- [最强Fenchel对偶](https://zhuanlan.zhihu.com/p/32202419)
+- [凸优化](https://space.bilibili.com/364872099/channel/index)
+- [Se Young Yun](https://www.youtube.com/user/list1343/playlists)
+- [共轭函数3](https://www.bilibili.com/video/BV19a4y1v7WZ/?spm_id_from=trigger_reload)
+- [东北师范 共轭](https://www.bilibili.com/video/BV1DZ4y1W7B2?from=search&seid=17386985341131596967)
+- 
+
