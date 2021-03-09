@@ -1037,9 +1037,51 @@ f is closed and convex $f^{**} = f $. Then....
 
 ### Moreau Decomposition
 
+### A Type of Problem
+primal:
+$$
+\min: f(x) + g( A x )  \Leftrightarrow \min: f(x) + g(y) \quad s.t. \ y = A x 
+$$
+dual:
+$$
+\max_z : - f^*(- A^T z ) - g^*(z)
+$$
+Deriving the dual 
+$$
+\min: f(x) + g(y) \quad s.t. \ y = A x  \Leftrightarrow \min_{x,y} \max_{z}: f(x) + g(y) + z^T (Ax - y)  \\
+= \max_{z} \min_{x,y}: f(x) + g(y) + z^T Ax - z^T y  \\
+= \max_{z} \bigg (  \min_x: (A^T z)^T x + f(x)  + \min_y: (-z)^Ty + g(y)  \bigg ) \\
+= \max_{z} \bigg (  - \sup_x : (-A^T z)^T x - f(x) -  \sup_y:  z^Ty - g(y) \bigg ) \\
+= \max_z - f^* ( - A^T z ) - g^* (z)
+$$
+Requires strong duality:
+$$
+\min \max = \max \min  \\
+\text{Slater's condition: } \exists \tilde{x} \in \text{int doom } f, A \textit{x} \in  \text{int doom } g.
+$$
 
-
+### Optimality Conditions and Lagrangian
+$\hat{x}$ is an optimal solution if 
+$$
+0 \in \partial f (\hat{x}) + A^T \partial g( A \hat{x} ) \\
+i.e. \quad \exists z \in \partial g(A \hat{x} ) \  \textit{with} \ -A^T z \in \partial f(\hat{x})
+$$
+Equivalent to: $\hat{x}, \hat{y} = A \hat{x}$, minimizers of Lagrangian
+$$
+L(x, y, z) = f(x) + g(y) + z^T (Ax - y)
+$$
+$\hat{x}, \hat{y}$ is opt. for given $z$:
+$$
+0 \in \partial f(\hat{x}) + z^T A \\
+0 \in \partial g(\hat{y}) - z
+$$
 ## Dual Decompositon Algorithms
 Proximal Point Algorithm, Prox Grad in the Dual, Augmented Lagrangian Method
+### Gual Gradient Ascent - Equality Constraints
+### Proximal Poximal Point Algorithm
+-  When is this a good idea?
+-  What are properties?
+### Moreau-Yosida Smoothing
+
 ## Monotone Operators, Contractive Operators
 Non-Expansive and Firmly Non-Expansive operators
