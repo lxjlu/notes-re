@@ -491,5 +491,7 @@
 
 ## 2021-03-10
 
-- 
+- [ICML 2017 Tutorial: Recent Advances in Stochastic Convex and Non-Convex](https://www.youtube.com/watch?v=jPjhiaeYruQ&ab_channel=ZeyuanAllen-Zhu)
+- [任务148： Coordinate Descent](https://www.youtube.com/watch?v=Z5PA-N6auL0&ab_channel=William)
+- [SAC](https://zhuanlan.zhihu.com/p/164539842)
 
