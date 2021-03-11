@@ -503,5 +503,8 @@
 - [ADMM收敛速率问题](https://www.zhihu.com/question/309568920)
 - [SGP 2020: Anderson Acceleration for Nonconvex ADMM Based on Douglas-Rachford Splitting](https://www.youtube.com/watch?v=4mlK_0qLfbY&t=8s)
 - [优化PPT总结的比较好](https://www.ima.umn.edu/materials/2013-2014/ND5.27-6.13.14/20841/wright-ima-controlopt-2.pdf)
+- [内点法](https://www.youtube.com/watch?v=XFKBNJ14UmY&list=PLjbUi5mgii6AVdvImLB9-Hako68p9MpIC&ab_channel=RyanT)
+- [内点  中心路径](http://www.cs.cmu.edu/~pradeepr/convexopt/Lecture_Slides/primal-dual.pdf)
+- [Convex Optimization: Fall 2019](https://www.stat.cmu.edu/~ryantibs/convexopt/)
 - 
 
