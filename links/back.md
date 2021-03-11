@@ -506,5 +506,6 @@
 - [内点法](https://www.youtube.com/watch?v=XFKBNJ14UmY&list=PLjbUi5mgii6AVdvImLB9-Hako68p9MpIC&ab_channel=RyanT)
 - [内点  中心路径](http://www.cs.cmu.edu/~pradeepr/convexopt/Lecture_Slides/primal-dual.pdf)
 - [Convex Optimization: Fall 2019](https://www.stat.cmu.edu/~ryantibs/convexopt/)
+- [对偶锥](https://www.bilibili.com/video/BV1tk4y1R7pN/?spm_id_from=333.788.videocard.0)
 - 
 
