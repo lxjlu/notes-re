@@ -494,4 +494,14 @@
 - [ICML 2017 Tutorial: Recent Advances in Stochastic Convex and Non-Convex](https://www.youtube.com/watch?v=jPjhiaeYruQ&ab_channel=ZeyuanAllen-Zhu)
 - [任务148： Coordinate Descent](https://www.youtube.com/watch?v=Z5PA-N6auL0&ab_channel=William)
 - [SAC](https://zhuanlan.zhihu.com/p/164539842)
+- [Tutorial on successive pseudoconvex approximation by Yang Yang and Marius Pesavento](https://www.youtube.com/watch?v=wANbdZjC_Rs&t=190s)
+- [EE563 Convex Optimization - Duality: Geometric Interpretation](https://www.youtube.com/watch?v=TqDTUDmvtvE)
+
+## 2021-03-11
+
+- [半光滑牛顿很好的解释](https://zhuanlan.zhihu.com/p/38902833)
+- [ADMM收敛速率问题](https://www.zhihu.com/question/309568920)
+- [SGP 2020: Anderson Acceleration for Nonconvex ADMM Based on Douglas-Rachford Splitting](https://www.youtube.com/watch?v=4mlK_0qLfbY&t=8s)
+- [优化PPT总结的比较好](https://www.ima.umn.edu/materials/2013-2014/ND5.27-6.13.14/20841/wright-ima-controlopt-2.pdf)
+- 
 
