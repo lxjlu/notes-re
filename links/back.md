@@ -508,5 +508,11 @@
 - [Convex Optimization: Fall 2019](https://www.stat.cmu.edu/~ryantibs/convexopt/)
 - [对偶锥](https://www.bilibili.com/video/BV1tk4y1R7pN/?spm_id_from=333.788.videocard.0)
 - [Lec 15 Barrier method](https://www.youtube.com/watch?v=_DD17Mj5Y6Y&list=PLjbUi5mgii6AVdvImLB9-Hako68p9MpIC&index=15&ab_channel=RyanT)
+
+## 2021-03-15
+
+- [数学规划](https://www.zhihu.com/column/c_149370723)
+- [非凸问题](https://people.eecs.berkeley.edu/~elghaoui/Teaching/Zinal2012/Lect2.pdf)
+- [QCQP](https://web.stanford.edu/class/ee364b/lectures/OLDrelaxations.pdf)
 - 
 
