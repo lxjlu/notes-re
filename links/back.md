@@ -514,5 +514,12 @@
 - [数学规划](https://www.zhihu.com/column/c_149370723)
 - [非凸问题](https://people.eecs.berkeley.edu/~elghaoui/Teaching/Zinal2012/Lect2.pdf)
 - [QCQP](https://web.stanford.edu/class/ee364b/lectures/OLDrelaxations.pdf)
+- [大佬的数值优化课程](https://www.syscop.de/teaching/ss2017/numerical-optimal-control)
+- [iterative linear-quadratic approximations for nonlinera multi-player general-sum differential games](https://www.youtube.com/watch?v=KPEPk-QrkQ8)
+- [变分不等式和互补问题基础](https://zhuanlan.zhihu.com/p/92944720)
+- [5-day course on "advanced game-theoretic models" by Uday Shanbhag](https://www.youtube.com/playlist?list=PLKLR7D59yU0fuZTH5wjgov31D3DXta_l-)
+
+## 2021-03-16
+
 - 
 
