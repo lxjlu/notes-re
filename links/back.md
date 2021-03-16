@@ -523,7 +523,7 @@
 
 - 非线性互补理论与算法
 - [何老师主页](http://maths.nju.edu.cn/~hebma/)
-- [Nonsmooth Dynamocs of Generalized Nash Games](https://www.youtube.com/watch?v=_guZnqfPndI)
+- [Nonsmooth Dynamics of Generalized Nash Games](https://www.youtube.com/watch?v=_guZnqfPndI)
 - [computation of equilibria in finite games](https://www.cis.upenn.edu/~mkearns/teaching/cgt/mckelvey.pdf)
 - [workshop on dynamics, optimization and variational analysis in applied games](http://www.fields.utoronto.ca/activities/19-20/applied-games)
 - [enabling obots to cooperate and compete: distributed optimzation](https://www.youtube.com/watch?v=PTGaTYxhKwE)
