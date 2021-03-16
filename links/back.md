@@ -527,5 +527,6 @@
 - [computation of equilibria in finite games](https://www.cis.upenn.edu/~mkearns/teaching/cgt/mckelvey.pdf)
 - [workshop on dynamics, optimization and variational analysis in applied games](http://www.fields.utoronto.ca/activities/19-20/applied-games)
 - [enabling obots to cooperate and compete: distributed optimzation](https://www.youtube.com/watch?v=PTGaTYxhKwE)
+- [Mingyu Wang 哈尔滨工业大学硕士  斯坦福大学博士生](https://scholar.google.com/citations?user=UIIRCmcAAAAJ&hl=en)
 - 
 
