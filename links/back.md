@@ -529,5 +529,16 @@
 - [enabling obots to cooperate and compete: distributed optimzation](https://www.youtube.com/watch?v=PTGaTYxhKwE)
 - [Mingyu Wang 哈尔滨工业大学硕士  斯坦福大学博士生](https://scholar.google.com/citations?user=UIIRCmcAAAAJ&hl=en)
 - [Plenary Lecture by Lacra Pavel at NECSYS 2018](https://www.youtube.com/watch?v=ZB1TXllgwyo&ab_channel=IfacYouTube)
+
+## 2021-03-17
+
+- [Autonomy Talks - Yashwanth Nakka: Chance-Constrained Trajectory Optimization](https://www.youtube.com/watch?v=kyzrHKybxIE&ab_channel=ETHZ%C3%BCrichFrazzoli)
+- [IMPA 60 Anos - Generalized Nash Equilibrium Problems](https://www.youtube.com/watch?v=AiIsc5uiB-o&ab_channel=InstitutodeMatem%C3%A1ticaPuraeAplicada)
+- [a survey of GNE computation methods: theory and algorithms](https://hal.archives-ouvertes.fr/hal-00813531/document)
+- [Parametrized Inexact-ADMM Based Coordination Gmaes: A Normalized Nash Equilibrium Approach](https://hal.archives-ouvertes.fr/hal-02925005/document)
+- [generalized nash equilibrium problems - recent advances and challenges](https://www.scielo.br/scielo.php?pid=S0101-74382014000300521&script=sci_arttext_plus&tlng=en)
+- [Parametrized Variational Inequality Approaches to Generalized Nash Equilibrium Problem with Shared Constraints](https://www.mit.edu/~dimitrib/PTseng/papers/vi_gnep_rev.pdf)
+- [blog Jointly Convex Generalized Nash Equilibrium Problems](https://shuvomoy.github.io/blog/game%20theory/2015/10/08/Jointly_Convex_Nash_Game.html)
+- [Uday Shanbhag - Workshop on Dynamics, Optimization and Variational Analysis in Applied Games](https://www.youtube.com/watch?v=Q0Yi_gpdtqM&ab_channel=FieldsInstitute)
 - 
 
