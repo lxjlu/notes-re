@@ -528,5 +528,6 @@
 - [workshop on dynamics, optimization and variational analysis in applied games](http://www.fields.utoronto.ca/activities/19-20/applied-games)
 - [enabling obots to cooperate and compete: distributed optimzation](https://www.youtube.com/watch?v=PTGaTYxhKwE)
 - [Mingyu Wang 哈尔滨工业大学硕士  斯坦福大学博士生](https://scholar.google.com/citations?user=UIIRCmcAAAAJ&hl=en)
+- [Plenary Lecture by Lacra Pavel at NECSYS 2018](https://www.youtube.com/watch?v=ZB1TXllgwyo&ab_channel=IfacYouTube)
 - 
 
